@@ -1,0 +1,3011 @@
+﻿<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>楊梅高中分機一覽表 | 桃園市立楊梅高級中學</title>
+  <meta name="description" content="桃園市立楊梅高級中學語音電話分機一覽表，提供即時檢索、處室分類瀏覽、一鍵複製、手機直撥與互動撥號盤功能。">
+  <!-- Google Fonts for crisp Traditional Chinese typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;900&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <style>
+    /* ==========================================================================
+       CSS Variables & Theme Design System
+       ========================================================================== */
+    :root {
+      /* Base font scaling */
+      --font-scale: 1;
+      --base-font-size: 16px;
+      
+      /* Vibrant Theme Colors */
+      --color-primary: #1e40af;
+      --color-primary-light: #3b82f6;
+      --color-primary-bg: #eff6ff;
+      --color-accent: #f59e0b;
+      
+      /* Department Signature Palette */
+      --dept-admin: #d97706;        /* 校長室與行政 - 陽光金琥珀 */
+      --dept-admin-bg: #fffbeb;
+      --dept-admin-border: #fcd34d;
+
+      --dept-academic: #2563eb;     /* 教務處 - 智慧湛藍 */
+      --dept-academic-bg: #eff6ff;
+      --dept-academic-border: #bfdbfe;
+
+      --dept-student: #ea580c;      /* 學務處與校安 - 活力珊瑚橘 */
+      --dept-student-bg: #fff7ed;
+      --dept-student-border: #fed7aa;
+
+      --dept-general: #059669;      /* 總務處與員生 - 清新薄荷綠 */
+      --dept-general-bg: #ecfdf5;
+      --dept-general-border: #a7f3d0;
+
+      --dept-practice: #7c3aed;     /* 實習處 - 科技紫羅蘭 */
+      --dept-practice-bg: #f5f3ff;
+      --dept-practice-border: #ddd6fe;
+
+      --dept-counsel: #db2777;      /* 輔導室 - 溫馨玫瑰粉 */
+      --dept-counsel-bg: #fdf2f8;
+      --dept-counsel-border: #fbcfe8;
+
+      --dept-library: #0891b2;      /* 圖書館 - 知性湖水青 */
+      --dept-library-bg: #ecfeff;
+      --dept-library-border: #a5f3fc;
+
+      --dept-teachers: #6366f1;     /* 導師與專任教師 - 雅致靛藍 */
+      --dept-teachers-bg: #eef2ff;
+      --dept-teachers-border: #c7d2fe;
+
+      --dept-labs: #16a34a;         /* 專科教室與實驗室 - 翠綠盎然 */
+      --dept-labs-bg: #f0fdf4;
+      --dept-labs-border: #bbf7d0;
+
+      --dept-buildings: #4f46e5;    /* 大樓專區 - 莊嚴深靛藍 */
+      --dept-buildings-bg: #f5f3ff;
+      --dept-buildings-border: #c7d2fe;
+
+      /* UI Neutrals & Surfaces */
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-light: #94a3b8;
+      --border-subtle: #e2e8f0;
+      --shadow-sm: 0 1px 3px rgba(0,0,0,0.05), 0 1px 2px rgba(0,0,0,0.03);
+      --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.07), 0 2px 4px -2px rgba(0,0,0,0.04);
+      --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.08), 0 4px 6px -4px rgba(0,0,0,0.04);
+      --shadow-hover: 0 14px 20px -3px rgba(30, 64, 175, 0.12), 0 6px 8px -3px rgba(0,0,0,0.05);
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-full: 9999px;
+    }
+
+    /* Font Scale Classes */
+    body.font-normal { --font-scale: 1; }
+    body.font-large { --font-scale: 1.15; }
+    body.font-xlarge { --font-scale: 1.3; }
+
+    /* ==========================================================================
+       Reset & Base Typography
+       ========================================================================== */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      font-family: 'Noto Sans TC', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: calc(var(--base-font-size) * var(--font-scale));
+      line-height: 1.6;
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      background-image: 
+        radial-gradient(at 10% 20%, rgba(59, 130, 246, 0.06) 0px, transparent 50%),
+        radial-gradient(at 90% 10%, rgba(245, 158, 11, 0.06) 0px, transparent 50%),
+        radial-gradient(at 80% 80%, rgba(16, 185, 129, 0.05) 0px, transparent 50%),
+        radial-gradient(at 20% 90%, rgba(139, 92, 246, 0.05) 0px, transparent 50%);
+      background-attachment: fixed;
+      min-height: 100vh;
+      overflow-x: hidden;
+      transition: font-size 0.2s ease;
+    }
+
+    /* Smooth Scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Selection Highlight */
+    ::selection {
+      background: #bfdbfe;
+      color: #1e3a8a;
+    }
+
+    /* ==========================================================================
+       Header & Brand Hero
+       ========================================================================== */
+    .hero-header {
+      background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #0284c7 100%);
+      color: #ffffff;
+      padding: 2.2rem 1.2rem 2.8rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -5px rgba(30, 58, 138, 0.25);
+    }
+
+    /* Animated background elements */
+    .hero-header::before {
+      content: "";
+      position: absolute;
+      top: -30%;
+      right: -10%;
+      width: 450px;
+      height: 450px;
+      background: radial-gradient(circle, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0) 70%);
+      border-radius: 50%;
+      animation: floatSlow 12s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+
+    .hero-header::after {
+      content: "";
+      position: absolute;
+      bottom: -40%;
+      left: -5%;
+      width: 380px;
+      height: 380px;
+      background: radial-gradient(circle, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0) 70%);
+      border-radius: 50%;
+      animation: floatSlow 10s ease-in-out infinite alternate-reverse;
+      pointer-events: none;
+    }
+
+    @keyframes floatSlow {
+      0% { transform: translateY(0px) scale(1); }
+      100% { transform: translateY(25px) scale(1.08); }
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      position: relative;
+      z-index: 2;
+    }
+
+    .header-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 1.4rem;
+    }
+
+    .school-badge-wrap {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    /* Plum Blossom School Crest SVG */
+    .crest-icon-svg {
+      width: 58px;
+      height: 58px;
+      filter: drop-shadow(0 4px 6px rgba(0,0,0,0.2));
+      animation: pulseSubtle 3s ease-in-out infinite;
+      flex-shrink: 0;
+    }
+
+    @keyframes pulseSubtle {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+    }
+
+    .school-title-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .school-sub {
+      font-size: calc(0.9rem * var(--font-scale));
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: #93c5fd;
+      margin-bottom: 0.1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .school-name {
+      font-size: calc(1.95rem * var(--font-scale));
+      font-weight: 900;
+      letter-spacing: 0.04em;
+      line-height: 1.2;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .school-name span.highlight {
+      background: linear-gradient(120deg, #fef08a, #f59e0b);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Top Action Bar: Sound, Font, Dialpad, Print */
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-ctrl {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: #ffffff;
+      padding: 0.45rem 0.85rem;
+      border-radius: var(--radius-full);
+      font-size: calc(0.85rem * var(--font-scale));
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      user-select: none;
+    }
+
+    .btn-ctrl:hover {
+      background: rgba(255, 255, 255, 0.28);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+
+    .btn-ctrl:active {
+      transform: translateY(0);
+    }
+
+    .btn-ctrl.active {
+      background: #f59e0b;
+      color: #78350f;
+      border-color: #fbbf24;
+      box-shadow: 0 2px 8px rgba(245, 158, 11, 0.4);
+    }
+
+    /* Switchboard Overview Banner */
+    .switchboard-card {
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: var(--radius-lg);
+      padding: 1.1rem 1.4rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1rem;
+      margin-top: 1.2rem;
+    }
+
+    .switch-info-item {
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .switch-icon-circle {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+      box-shadow: inset 0 2px 4px rgba(255,255,255,0.2);
+    }
+
+    .switch-info-meta {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .switch-label {
+      font-size: calc(0.8rem * var(--font-scale));
+      color: #bfdbfe;
+      font-weight: 500;
+    }
+
+    .switch-value {
+      font-size: calc(1.05rem * var(--font-scale));
+      font-weight: 700;
+      letter-spacing: 0.02em;
+    }
+
+    .switch-value a {
+      color: #ffffff;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .switch-value a:hover {
+      color: #fde047;
+      text-decoration: underline;
+    }
+
+    .switch-badge-version {
+      align-self: center;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: var(--radius-full);
+      padding: 0.3rem 0.8rem;
+      font-size: calc(0.78rem * var(--font-scale));
+      color: #e0f2fe;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* ==========================================================================
+       Main Container Layout
+       ========================================================================== */
+    .app-main-wrap {
+      max-width: 1240px;
+      margin: -1.5rem auto 3rem;
+      padding: 0 1.2rem;
+      position: relative;
+      z-index: 10;
+    }
+
+    /* Interactive Search & Filter Card */
+    .control-panel-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 1.4rem;
+      box-shadow: var(--shadow-lg);
+      border: 1px solid var(--border-subtle);
+      margin-bottom: 1.6rem;
+      position: relative;
+    }
+
+    /* Search Input Container */
+    .search-box-row {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .search-input-wrapper {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .search-icon-inside {
+      position: absolute;
+      left: 1.1rem;
+      color: #64748b;
+      font-size: 1.2rem;
+      pointer-events: none;
+      transition: color 0.2s;
+    }
+
+    .main-search-input {
+      width: 100%;
+      font-family: inherit;
+      font-size: calc(1.08rem * var(--font-scale));
+      padding: 0.85rem 3rem 0.85rem 3.1rem;
+      border: 2px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      background-color: #f8fafc;
+      color: var(--text-main);
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      outline: none;
+    }
+
+    .main-search-input:focus {
+      background-color: #ffffff;
+      border-color: var(--color-primary-light);
+      box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+    }
+
+    .main-search-input:focus + .search-icon-inside {
+      color: var(--color-primary);
+    }
+
+    .clear-search-btn {
+      position: absolute;
+      right: 0.85rem;
+      background: #e2e8f0;
+      border: none;
+      border-radius: 50%;
+      width: 28px;
+      height: 28px;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: #475569;
+      font-size: 0.9rem;
+      transition: all 0.15s;
+    }
+
+    .clear-search-btn:hover {
+      background: #cbd5e1;
+      color: #0f172a;
+    }
+
+    /* Quick Filter Pills (Tags) */
+    .quick-tags-row {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.9rem;
+      border-bottom: 1px dashed var(--border-subtle);
+    }
+
+    .quick-tag-label {
+      font-size: calc(0.85rem * var(--font-scale));
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-right: 0.2rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .quick-pill {
+      font-size: calc(0.82rem * var(--font-scale));
+      font-weight: 600;
+      padding: 0.32rem 0.75rem;
+      border-radius: var(--radius-full);
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #334155;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      user-select: none;
+    }
+
+    .quick-pill:hover {
+      background: #e2e8f0;
+      transform: translateY(-1px);
+    }
+
+    .quick-pill.active {
+      background: var(--color-primary);
+      color: #ffffff;
+      border-color: var(--color-primary);
+      box-shadow: 0 2px 6px rgba(37, 99, 235, 0.35);
+    }
+
+    .quick-pill.pill-emergency {
+      border-color: #fecaca;
+      background: #fef2f2;
+      color: #b91c1c;
+    }
+    .quick-pill.pill-emergency:hover, .quick-pill.pill-emergency.active {
+      background: #ef4444;
+      color: #ffffff;
+      border-color: #dc2626;
+    }
+
+    .quick-pill.pill-favs {
+      border-color: #fde68a;
+      background: #fffbeb;
+      color: #b45309;
+    }
+    .quick-pill.pill-favs:hover, .quick-pill.pill-favs.active {
+      background: #f59e0b;
+      color: #ffffff;
+      border-color: #d97706;
+    }
+
+    /* Category Navigation Tabs (Horizontal Scrollable) */
+    .category-tabs-container {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      overflow-x: auto;
+      padding-bottom: 0.4rem;
+      scrollbar-width: thin;
+      scrollbar-color: #cbd5e1 transparent;
+      -webkit-overflow-scrolling: touch;
+    }
+
+    .category-tabs-container::-webkit-scrollbar {
+      height: 6px;
+    }
+    .category-tabs-container::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 4px;
+    }
+
+    .cat-tab-btn {
+      flex-shrink: 0;
+      font-family: inherit;
+      font-size: calc(0.88rem * var(--font-scale));
+      font-weight: 600;
+      padding: 0.55rem 0.95rem;
+      border-radius: var(--radius-md);
+      border: 1px solid transparent;
+      background: #f8fafc;
+      color: #475569;
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      user-select: none;
+    }
+
+    .cat-tab-btn:hover {
+      background: #f1f5f9;
+      color: #0f172a;
+    }
+
+    .cat-tab-btn.active {
+      background: #eff6ff;
+      border-color: #93c5fd;
+      color: var(--color-primary);
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.1);
+    }
+
+    .cat-tab-btn .badge-count {
+      font-size: calc(0.72rem * var(--font-scale));
+      background: rgba(0, 0, 0, 0.08);
+      padding: 0.15rem 0.45rem;
+      border-radius: var(--radius-full);
+      font-weight: 700;
+    }
+
+    .cat-tab-btn.active .badge-count {
+      background: var(--color-primary);
+      color: #ffffff;
+    }
+
+    /* Tab bar view mode & filter meta */
+    .filter-status-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 1.2rem 0 1rem;
+      padding: 0 0.4rem;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .results-count-text {
+      font-size: calc(0.92rem * var(--font-scale));
+      color: var(--text-muted);
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .results-count-text span.num {
+      color: var(--color-primary);
+      font-weight: 800;
+      font-size: calc(1.1rem * var(--font-scale));
+    }
+
+    .view-mode-toggles {
+      display: inline-flex;
+      background: #e2e8f0;
+      padding: 3px;
+      border-radius: var(--radius-sm);
+      gap: 2px;
+    }
+
+    .view-btn {
+      border: none;
+      background: transparent;
+      padding: 0.4rem 0.75rem;
+      border-radius: 6px;
+      font-size: calc(0.85rem * var(--font-scale));
+      font-weight: 600;
+      color: #475569;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s;
+    }
+
+    .view-btn.active {
+      background: #ffffff;
+      color: var(--text-main);
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    /* ==========================================================================
+       Card Grid Display View (Default View)
+       ========================================================================== */
+    .extensions-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.1rem;
+    }
+
+    /* Single Extension Card */
+    .ext-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 1.15rem;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      overflow: hidden;
+    }
+
+    .ext-card::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--dept-color, #3b82f6);
+      transition: width 0.2s;
+    }
+
+    .ext-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    .ext-card:hover::before {
+      width: 8px;
+    }
+
+    /* Card Header */
+    .ext-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.65rem;
+      gap: 0.5rem;
+    }
+
+    .dept-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: calc(0.78rem * var(--font-scale));
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: var(--radius-full);
+      background: var(--dept-bg, #eff6ff);
+      color: var(--dept-color, #2563eb);
+      border: 1px solid var(--dept-border, #bfdbfe);
+    }
+
+    .building-tag {
+      font-size: calc(0.74rem * var(--font-scale));
+      color: #64748b;
+      background: #f1f5f9;
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.2rem;
+    }
+
+    .fav-star-btn {
+      background: transparent;
+      border: none;
+      font-size: 1.15rem;
+      color: #cbd5e1;
+      cursor: pointer;
+      transition: transform 0.2s, color 0.2s;
+      padding: 0.2rem;
+      line-height: 1;
+    }
+
+    .fav-star-btn:hover {
+      color: #f59e0b;
+      transform: scale(1.2);
+    }
+
+    .fav-star-btn.is-fav {
+      color: #f59e0b;
+    }
+
+    /* Card Content */
+    .ext-card-body {
+      margin-bottom: 1rem;
+    }
+
+    .title-name-row {
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.4rem;
+    }
+
+    .job-title {
+      font-size: calc(1.15rem * var(--font-scale));
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.3;
+    }
+
+    .person-name {
+      font-size: calc(1rem * var(--font-scale));
+      font-weight: 600;
+      color: #475569;
+      background: #f8fafc;
+      padding: 0.1rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .direct-lines-info {
+      font-size: calc(0.82rem * var(--font-scale));
+      color: #64748b;
+      margin-top: 0.35rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .line-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .line-chip.direct-tel {
+      color: #0284c7;
+      font-weight: 600;
+    }
+
+    .line-chip.fax-num {
+      color: #64748b;
+    }
+
+    /* Highlight keyword match */
+    mark.search-highlight {
+      background: #fde047;
+      color: #0f172a;
+      padding: 0 0.2rem;
+      border-radius: 2px;
+      font-weight: 800;
+    }
+
+    /* Extension Number Box */
+    .ext-number-box {
+      background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-md);
+      padding: 0.65rem 0.9rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .ext-numbers-wrap {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .ext-num-badge {
+      font-family: 'Outfit', 'Noto Sans TC', sans-serif;
+      font-size: calc(1.35rem * var(--font-scale));
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--color-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    .ext-num-badge.secondary {
+      font-size: calc(1.15rem * var(--font-scale));
+      color: #475569;
+    }
+
+    /* Card Action Buttons */
+    .ext-card-actions {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .action-btn {
+      font-family: inherit;
+      font-size: calc(0.82rem * var(--font-scale));
+      font-weight: 700;
+      padding: 0.45rem 0.75rem;
+      border-radius: var(--radius-sm);
+      border: none;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.35rem;
+      transition: all 0.18s cubic-bezier(0.4, 0, 0.2, 1);
+      text-decoration: none;
+      flex: 1;
+    }
+
+    .btn-copy {
+      background: #f1f5f9;
+      color: #334155;
+      border: 1px solid #cbd5e1;
+    }
+
+    .btn-copy:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+      transform: translateY(-1px);
+    }
+
+    .btn-copy.copied {
+      background: #10b981;
+      color: #ffffff;
+      border-color: #059669;
+    }
+
+    .btn-call {
+      background: var(--color-primary);
+      color: #ffffff;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.25);
+    }
+
+    .btn-call:hover {
+      background: #1d4ed8;
+      transform: translateY(-1px);
+      box-shadow: 0 4px 8px rgba(37, 99, 235, 0.35);
+    }
+
+    /* ==========================================================================
+       Department Grouped View
+       ========================================================================== */
+    .dept-groups-container {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .dept-section {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+
+    .dept-section-header {
+      padding: 1.1rem 1.4rem;
+      background: var(--dept-header-bg, #f8fafc);
+      border-bottom: 2px solid var(--dept-color, #cbd5e1);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+    }
+
+    .dept-title-group {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+    }
+
+    .dept-title-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--dept-color, #3b82f6);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+    }
+
+    .dept-title-text {
+      font-size: calc(1.25rem * var(--font-scale));
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .dept-header-telecom {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      font-size: calc(0.85rem * var(--font-scale));
+    }
+
+    .telecom-pill {
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 0.25rem 0.65rem;
+      border-radius: var(--radius-full);
+      color: #334155;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .telecom-pill a {
+      color: inherit;
+      text-decoration: none;
+    }
+    .telecom-pill a:hover {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+
+    .dept-section-grid {
+      padding: 1.2rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 1rem;
+    }
+
+    /* ==========================================================================
+       Compact Table View
+       ========================================================================== */
+    .table-view-container {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      box-shadow: var(--shadow-sm);
+      overflow-x: auto;
+    }
+
+    .ext-data-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: calc(0.92rem * var(--font-scale));
+      text-align: left;
+    }
+
+    .ext-data-table th {
+      background: #f1f5f9;
+      color: #334155;
+      font-weight: 700;
+      padding: 0.85rem 1rem;
+      border-bottom: 2px solid #cbd5e1;
+      white-space: nowrap;
+    }
+
+    .ext-data-table td {
+      padding: 0.75rem 1rem;
+      border-bottom: 1px solid var(--border-subtle);
+      vertical-align: middle;
+    }
+
+    .ext-data-table tr:hover td {
+      background: #f8fafc;
+    }
+
+    .ext-data-table .table-ext-num {
+      font-family: 'Outfit', sans-serif;
+      font-size: calc(1.15rem * var(--font-scale));
+      font-weight: 800;
+      color: var(--color-primary);
+    }
+
+    /* ==========================================================================
+       Empty State & Not Found
+       ========================================================================== */
+    .empty-state-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      padding: 3.5rem 1.5rem;
+      text-align: center;
+      border: 2px dashed #cbd5e1;
+      margin: 1.5rem 0;
+    }
+
+    .empty-icon {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+      40% {transform: translateY(-15px);}
+      60% {transform: translateY(-7px);}
+    }
+
+    .empty-title {
+      font-size: calc(1.25rem * var(--font-scale));
+      font-weight: 800;
+      color: #334155;
+      margin-bottom: 0.5rem;
+    }
+
+    .empty-desc {
+      font-size: calc(0.95rem * var(--font-scale));
+      color: #64748b;
+      margin-bottom: 1.2rem;
+    }
+
+    /* ==========================================================================
+       Interactive Dialpad Modal (電話速撥盤)
+       ========================================================================== */
+    .modal-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+    }
+
+    .modal-backdrop.show {
+      display: flex;
+      opacity: 1;
+    }
+
+    .dialpad-modal {
+      background: #ffffff;
+      border-radius: var(--radius-lg);
+      max-width: 420px;
+      width: 100%;
+      padding: 1.6rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 1px solid #cbd5e1;
+      transform: scale(0.95);
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .modal-backdrop.show .dialpad-modal {
+      transform: scale(1);
+    }
+
+    .dialpad-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .dialpad-title {
+      font-size: calc(1.2rem * var(--font-scale));
+      font-weight: 800;
+      color: #1e3a8a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .dialpad-close-btn {
+      background: #f1f5f9;
+      border: none;
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: #64748b;
+      transition: all 0.15s;
+    }
+
+    .dialpad-close-btn:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    /* Screen display on dialpad */
+    .dialpad-display {
+      background: #0f172a;
+      color: #38bdf8;
+      border-radius: var(--radius-md);
+      padding: 1rem 1.2rem;
+      text-align: right;
+      font-family: 'Outfit', monospace;
+      font-size: calc(1.8rem * var(--font-scale));
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      min-height: 65px;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      margin-bottom: 1.2rem;
+      box-shadow: inset 0 2px 6px rgba(0,0,0,0.4);
+      position: relative;
+    }
+
+    .dialpad-display-hint {
+      position: absolute;
+      left: 1rem;
+      font-size: 0.75rem;
+      color: #64748b;
+      font-family: 'Noto Sans TC', sans-serif;
+      font-weight: normal;
+    }
+
+    /* Digits grid */
+    .dialpad-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.75rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .digit-btn {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      border-radius: var(--radius-md);
+      padding: 0.85rem 0.5rem;
+      font-family: 'Outfit', sans-serif;
+      font-size: calc(1.5rem * var(--font-scale));
+      font-weight: 700;
+      color: #1e293b;
+      cursor: pointer;
+      transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      user-select: none;
+    }
+
+    .digit-btn span.sub-letters {
+      font-size: 0.65rem;
+      font-weight: 600;
+      color: #94a3b8;
+      letter-spacing: 0.1em;
+      margin-top: -2px;
+    }
+
+    .digit-btn:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
+      color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    .digit-btn:active {
+      transform: translateY(0);
+      background: #dbeafe;
+    }
+
+    .dialpad-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn-dial-action {
+      flex: 1;
+      padding: 0.8rem;
+      border-radius: var(--radius-md);
+      font-weight: 700;
+      font-size: calc(0.95rem * var(--font-scale));
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s;
+    }
+
+    .btn-dial-clear {
+      background: #f1f5f9;
+      color: #475569;
+    }
+    .btn-dial-clear:hover {
+      background: #e2e8f0;
+      color: #0f172a;
+    }
+
+    .btn-dial-call {
+      background: #16a34a;
+      color: #ffffff;
+      box-shadow: 0 4px 10px rgba(22, 163, 74, 0.3);
+    }
+    .btn-dial-call:hover {
+      background: #15803d;
+      transform: translateY(-1px);
+    }
+
+    /* Live dial match result box */
+    .dial-match-preview {
+      background: #f8fafc;
+      border: 1px dashed #cbd5e1;
+      border-radius: var(--radius-sm);
+      padding: 0.65rem 0.85rem;
+      font-size: calc(0.85rem * var(--font-scale));
+      margin-bottom: 1rem;
+      min-height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    /* ==========================================================================
+       Interactive Campus Building Guide Section
+       ========================================================================== */
+    .campus-buildings-overview {
+      background: var(--bg-card);
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--border-subtle);
+      padding: 1.4rem;
+      box-shadow: var(--shadow-sm);
+      margin-top: 2rem;
+    }
+
+    .overview-title-bar {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      margin-bottom: 1rem;
+    }
+
+    .overview-title {
+      font-size: calc(1.18rem * var(--font-scale));
+      font-weight: 800;
+      color: #1e3a8a;
+    }
+
+    .building-pills-row {
+      display: flex;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+
+    .bld-pill {
+      background: #f8fafc;
+      border: 1px solid #cbd5e1;
+      padding: 0.5rem 0.85rem;
+      border-radius: var(--radius-md);
+      font-size: calc(0.85rem * var(--font-scale));
+      font-weight: 600;
+      color: #334155;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.2s;
+    }
+
+    .bld-pill:hover {
+      background: #eff6ff;
+      border-color: #93c5fd;
+      color: var(--color-primary);
+      transform: translateY(-2px);
+    }
+
+    /* ==========================================================================
+       Floating Toast Notifications
+       ========================================================================== */
+    .toast-container {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      z-index: 2000;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      pointer-events: none;
+    }
+
+    .toast-msg {
+      background: #0f172a;
+      color: #ffffff;
+      padding: 0.85rem 1.25rem;
+      border-radius: var(--radius-md);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      font-size: calc(0.92rem * var(--font-scale));
+      font-weight: 600;
+      border-left: 4px solid #10b981;
+      transform: translateY(20px);
+      opacity: 0;
+      transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      pointer-events: auto;
+    }
+
+    .toast-msg.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       Footer Section
+       ========================================================================== */
+    .app-footer {
+      background: #ffffff;
+      border-top: 1px solid var(--border-subtle);
+      padding: 2.2rem 1.2rem;
+      color: #64748b;
+      font-size: calc(0.85rem * var(--font-scale));
+      text-align: center;
+    }
+
+    .footer-content {
+      max-width: 900px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: var(--color-primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .footer-links a:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       Print Optimization Styles
+       ========================================================================== */
+    @media print {
+      body {
+        background: #ffffff !important;
+        color: #000000 !important;
+        font-size: 11pt !important;
+      }
+
+      .hero-header {
+        background: none !important;
+        color: #000000 !important;
+        padding: 0 0 1rem 0 !important;
+        box-shadow: none !important;
+        border-bottom: 2px solid #000000;
+      }
+
+      .hero-header::before, .hero-header::after {
+        display: none !important;
+      }
+
+      .school-sub {
+        color: #555555 !important;
+      }
+
+      .school-name span.highlight {
+        -webkit-text-fill-color: #000000 !important;
+      }
+
+      .header-controls, 
+      .control-panel-card, 
+      .view-mode-toggles, 
+      .ext-card-actions, 
+      .fav-star-btn, 
+      .modal-backdrop, 
+      .toast-container,
+      .app-footer {
+        display: none !important;
+      }
+
+      .switchboard-card {
+        background: #f8fafc !important;
+        border: 1px solid #ccc !important;
+        color: #000000 !important;
+        page-break-inside: avoid;
+      }
+
+      .switch-value a {
+        color: #000000 !important;
+      }
+
+      .switch-label {
+        color: #444444 !important;
+      }
+
+      .app-main-wrap {
+        margin: 1rem 0 !important;
+        padding: 0 !important;
+        max-width: 100% !important;
+      }
+
+      .dept-section {
+        border: 1px solid #999999 !important;
+        box-shadow: none !important;
+        page-break-inside: avoid;
+        margin-bottom: 1rem !important;
+      }
+
+      .ext-card {
+        box-shadow: none !important;
+        border: 1px solid #bbbbbb !important;
+        page-break-inside: avoid;
+      }
+
+      .ext-card::before {
+        display: none !important;
+      }
+
+      .dept-section-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+      }
+    }
+
+    /* ==========================================================================
+       Responsive Media Queries
+       ========================================================================== */
+    @media (max-width: 768px) {
+      .hero-header {
+        padding: 1.6rem 1rem 2.2rem;
+      }
+
+      .school-name {
+        font-size: calc(1.5rem * var(--font-scale));
+      }
+
+      .header-top-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-controls {
+        width: 100%;
+        justify-content: flex-start;
+      }
+
+      .switchboard-card {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+      }
+
+      .control-panel-card {
+        padding: 1.1rem;
+      }
+
+      .extensions-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dept-section-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .filter-status-bar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .view-mode-toggles {
+        width: 100%;
+        justify-content: space-around;
+      }
+    }
+  </style>
+</head>
+<body class="font-normal">
+
+  <!-- ==========================================================================
+       Header / Hero Banner Section
+       ========================================================================== -->
+  <header class="hero-header">
+    <div class="header-container">
+      
+      <!-- Top Title & Quick Utility Controls -->
+      <div class="header-top-row">
+        
+        <div class="school-badge-wrap">
+          <!-- Vector Crest SVG (Plum Blossom + Book + Laurel) -->
+          <svg class="crest-icon-svg" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Outer Golden Ring -->
+            <circle cx="50" cy="50" r="46" fill="#1e3a8a" stroke="#fbbf24" stroke-width="4"/>
+            <!-- Plum Blossom Petals Motif (楊梅意象) -->
+            <circle cx="50" cy="27" r="14" fill="#fbbf24" opacity="0.85"/>
+            <circle cx="72" cy="43" r="14" fill="#fbbf24" opacity="0.85"/>
+            <circle cx="64" cy="69" r="14" fill="#fbbf24" opacity="0.85"/>
+            <circle cx="36" cy="69" r="14" fill="#fbbf24" opacity="0.85"/>
+            <circle cx="28" cy="43" r="14" fill="#fbbf24" opacity="0.85"/>
+            <!-- Central Shield -->
+            <path d="M50 24 L68 36 V58 C68 70 50 80 50 80 C50 80 32 70 32 58 V36 Z" fill="#ffffff" stroke="#1e3a8a" stroke-width="2"/>
+            <!-- Open Book Icon inside shield -->
+            <path d="M42 46 C45 44 48 44 50 46 C52 44 55 44 58 46 V59 C55 57 52 57 50 59 C48 57 45 57 42 59 Z" fill="#2563eb"/>
+            <!-- Stylized Y / M character for 楊梅 -->
+            <text x="50" y="70" font-family="'Outfit', sans-serif" font-weight="900" font-size="11" fill="#1e3a8a" text-anchor="middle">TYHS</text>
+          </svg>
+
+          <div class="school-title-text">
+            <div class="school-sub">
+              <span>TAOYUAN MUNICIPAL YANGMEI SENIOR HIGH SCHOOL</span>
+            </div>
+            <h1 class="school-name">
+              楊梅高中 <span class="highlight">分機一覽表</span>
+            </h1>
+          </div>
+        </div>
+
+        <!-- Top Tool Controls -->
+        <div class="header-controls">
+          <!-- Font Size Adjuster -->
+          <button class="btn-ctrl" id="btnFontToggle" title="調整字體大小以利閱讀">
+            <span>🔤</span> <span id="fontScaleText">字體: 標準</span>
+          </button>
+          
+          <!-- Sound Toggle Button -->
+          <button class="btn-ctrl" id="btnSoundToggle" title="開啟或關閉操作互動音效">
+            <span id="soundIcon">🔊</span> <span id="soundText">音效開啟</span>
+          </button>
+
+          <!-- Dialpad Modal Trigger -->
+          <button class="btn-ctrl" id="btnOpenDialpad" title="開啟快速撥號盤與分機試撥">
+            <span>🔢</span> <span>速撥鍵盤</span>
+          </button>
+
+          <!-- Print / Export Button -->
+          <button class="btn-ctrl" id="btnPrint" title="友善排版列印分機表">
+            <span>🖨️</span> <span>列印/備份</span>
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Switchboard & Official Contact Overview -->
+      <div class="switchboard-card">
+        
+        <div class="switch-info-item">
+          <div class="switch-icon-circle">📞</div>
+          <div class="switch-info-meta">
+            <span class="switch-label">學校總機 (代表號)</span>
+            <span class="switch-value">
+              <a href="tel:034789618" title="手機點擊撥打總機">03-4789618</a>
+            </span>
+          </div>
+        </div>
+
+        <div class="switch-info-item">
+          <div class="switch-icon-circle">📲</div>
+          <div class="switch-info-meta">
+            <span class="switch-label">總機二線 / 三線</span>
+            <span class="switch-value">
+              <a href="tel:034780449">4780449</a> <small style="opacity:0.8">/ 4780740</small>
+            </span>
+          </div>
+        </div>
+
+        <div class="switch-info-item">
+          <div class="switch-icon-circle">🏫</div>
+          <div class="switch-info-meta">
+            <span class="switch-label">編製單位 & 版本日期</span>
+            <span class="switch-value">
+              總務處 編製
+              <span class="switch-badge-version">版次：115/09/07</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       Main Application Container
+       ========================================================================== -->
+  <main class="app-main-wrap">
+
+    <!-- Search & Control Panel Card -->
+    <section class="control-panel-card">
+
+      <!-- Live Search Bar -->
+      <div class="search-box-row">
+        <div class="search-input-wrapper">
+          <span class="search-icon-inside">🔍</span>
+          <input 
+            type="text" 
+            id="searchInput" 
+            class="main-search-input" 
+            placeholder="搜尋處室、職稱、姓名、分機或大樓 (例如: 校長, 1101, 教務, 邱組長, 實驗室)..." 
+            autocomplete="off"
+            spellcheck="false"
+          >
+          <button id="clearSearchBtn" class="clear-search-btn" title="清除搜尋內容">✕</button>
+        </div>
+      </div>
+
+      <!-- Quick Filter Pills -->
+      <div class="quick-tags-row">
+        <span class="quick-tag-label">⚡ 快速篩選:</span>
+        <button class="quick-pill active" data-filter="all">全部一覽</button>
+        <button class="quick-pill pill-favs" data-filter="favs">⭐ 我的常用 (<span id="favCount">0</span>)</button>
+        <button class="quick-pill pill-emergency" data-filter="emergency">🚨 緊急與安全</button>
+        <button class="quick-pill" data-filter="chiefs">👔 處室首長/主任</button>
+        <button class="quick-pill" data-filter="directlines">📞 專線電話</button>
+        <button class="quick-pill" data-filter="homeroom">👨‍🏫 各年級導師室</button>
+        <button class="quick-pill" data-filter="labs">🧪 實驗室與專科教室</button>
+      </div>
+
+      <!-- Category Navigation Tabs -->
+      <div class="category-tabs-container" id="categoryTabs">
+        <!-- Tabs dynamically rendered or initialized -->
+        <button class="cat-tab-btn active" data-cat="all">
+          <span>🌟 全部處室</span>
+          <span class="badge-count" id="countAll">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="校長室與行政">
+          <span>🏛️ 校長與行政</span>
+          <span class="badge-count" id="countAdmin">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="教務處">
+          <span>📚 教務處</span>
+          <span class="badge-count" id="countAcademic">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="學務處">
+          <span>🏃 學務處</span>
+          <span class="badge-count" id="countStudent">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="總務處">
+          <span>🔧 總務處</span>
+          <span class="badge-count" id="countGeneral">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="實習處">
+          <span>💻 實習處</span>
+          <span class="badge-count" id="countPractice">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="輔導室">
+          <span>💖 輔導室</span>
+          <span class="badge-count" id="countCounsel">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="圖書館">
+          <span>📖 圖書館</span>
+          <span class="badge-count" id="countLibrary">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="導師辦公室">
+          <span>📝 導師辦公室</span>
+          <span class="badge-count" id="countHomeroom">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="專任教師辦公室">
+          <span>🎓 專任教師室</span>
+          <span class="badge-count" id="countTeachers">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="實驗室">
+          <span>🔬 實驗室</span>
+          <span class="badge-count" id="countLabs">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="專科教室">
+          <span>🎨 專科教室</span>
+          <span class="badge-count" id="countSpecial">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="日新樓專科教室">
+          <span>🏢 日新樓專科</span>
+          <span class="badge-count" id="countRixin">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="御風樓">
+          <span>🥋 御風樓</span>
+          <span class="badge-count" id="countYufeng">0</span>
+        </button>
+        <button class="cat-tab-btn" data-cat="生科大樓">
+          <span>🥗 生科大樓</span>
+          <span class="badge-count" id="countLife">0</span>
+        </button>
+      </div>
+
+    </section>
+
+    <!-- Filter Status & View Mode Switches -->
+    <div class="filter-status-bar">
+      <div class="results-count-text">
+        <span>顯示結果：</span>
+        <span class="num" id="visibleCount">0</span>
+        <span style="color:#94a3b8">/</span>
+        <span id="totalItemsCount">0</span> 筆分機項目
+        <span id="activeFilterBadge" style="display:none; margin-left:8px; font-size:0.8rem; background:#e0f2fe; color:#0369a1; padding:2px 8px; border-radius:999px;"></span>
+      </div>
+
+      <div class="view-mode-toggles">
+        <button class="view-btn active" id="viewGroupedBtn" title="依處室分組卡片檢視">
+          <span>🗂️ 處室群組</span>
+        </button>
+        <button class="view-btn" id="viewGridBtn" title="卡片網格流覽">
+          <span>🏷️ 卡片網格</span>
+        </button>
+        <button class="view-btn" id="viewTableBtn" title="緊湊條列清單">
+          <span>📋 列表清單</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Dynamic Content Container -->
+    <div id="contentContainer">
+      <!-- Injected via JavaScript based on View Mode -->
+    </div>
+
+    <!-- Campus Buildings Quick Navigator -->
+    <section class="campus-buildings-overview">
+      <div class="overview-title-bar">
+        <span>🏛️</span>
+        <h3 class="overview-title">楊梅高中 大樓樓館分機快速導覽</h3>
+      </div>
+      <div class="building-pills-row">
+        <button class="bld-pill" onclick="filterByKeyword('悅知樓')">
+          <span>🏢 悅知樓</span> <small>(高一、高二導師室)</small>
+        </button>
+        <button class="bld-pill" onclick="filterByKeyword('日新樓')">
+          <span>🏢 日新樓</span> <small>(高三導師室、專三/四、展演中心)</small>
+        </button>
+        <button class="bld-pill" onclick="filterByKeyword('蘊慧樓')">
+          <span>🏢 蘊慧樓</span> <small>(專一/二、電腦機房)</small>
+        </button>
+        <button class="bld-pill" onclick="filterByKeyword('啟明樓')">
+          <span>🏢 啟明樓</span> <small>(校史室)</small>
+        </button>
+        <button class="bld-pill" onclick="filterByKeyword('御風樓')">
+          <span>🏢 御風樓</span> <small>(御風2/3系列、社團教室)</small>
+        </button>
+        <button class="bld-pill" onclick="filterByKeyword('生科大樓')">
+          <span>🏢 生科大樓</span> <small>(體育器材、生活科技、烹飪家政)</small>
+        </button>
+        <button class="bld-pill" onclick="filterByKeyword('健康中心')">
+          <span>🏥 健康中心</span> <small>(分機 1119 / 1342)</small>
+        </button>
+        <button class="bld-pill" onclick="filterByKeyword('警衛室')">
+          <span>🛡️ 警衛室</span> <small>(分機 1110)</small>
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       Interactive Dialpad Modal (速撥鍵盤)
+       ========================================================================== -->
+  <div class="modal-backdrop" id="dialpadModal">
+    <div class="dialpad-modal">
+      <div class="dialpad-header">
+        <div class="dialpad-title">
+          <span>☎️</span>
+          <span>楊梅高中 互動撥號盤</span>
+        </div>
+        <button class="dialpad-close-btn" id="closeDialpadBtn" title="關閉撥號盤">✕</button>
+      </div>
+
+      <!-- Dialpad Screen Display -->
+      <div class="dialpad-display" id="dialpadScreen">
+        <span class="dialpad-display-hint">點選數字輸入分機:</span>
+        <span id="dialpadValue"></span>
+      </div>
+
+      <!-- Real-time Extension Match Hint -->
+      <div class="dial-match-preview" id="dialMatchPreview">
+        <span id="dialMatchText" style="color:#64748b">輸入 4 碼分機以快速過濾聯絡人</span>
+        <span id="dialMatchExt" style="font-weight:800; color:var(--color-primary)"></span>
+      </div>
+
+      <!-- Keypad Grid (0-9, *, #) with authentic DTMF Tone generation -->
+      <div class="dialpad-grid">
+        <button class="digit-btn" data-key="1">1<span class="sub-letters">.</span></button>
+        <button class="digit-btn" data-key="2">2<span class="sub-letters">ABC</span></button>
+        <button class="digit-btn" data-key="3">3<span class="sub-letters">DEF</span></button>
+        <button class="digit-btn" data-key="4">4<span class="sub-letters">GHI</span></button>
+        <button class="digit-btn" data-key="5">5<span class="sub-letters">JKL</span></button>
+        <button class="digit-btn" data-key="6">6<span class="sub-letters">MNO</span></button>
+        <button class="digit-btn" data-key="7">7<span class="sub-letters">PQRS</span></button>
+        <button class="digit-btn" data-key="8">8<span class="sub-letters">TUV</span></button>
+        <button class="digit-btn" data-key="9">9<span class="sub-letters">WXYZ</span></button>
+        <button class="digit-btn" data-key="*">*<span class="sub-letters"></span></button>
+        <button class="digit-btn" data-key="0">0<span class="sub-letters">+</span></button>
+        <button class="digit-btn" data-key="#">#<span class="sub-letters"></span></button>
+      </div>
+
+      <!-- Dialpad Action Buttons -->
+      <div class="dialpad-actions">
+        <button class="btn-dial-action btn-dial-clear" id="dialpadBackspace">⌫ 倒退刪除</button>
+        <button class="btn-dial-action btn-dial-call" id="dialpadCallBtn">📞 立即撥號</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- ==========================================================================
+       Footer Section
+       ========================================================================== -->
+  <footer class="app-footer">
+    <div class="footer-content">
+      <div>
+        <strong>桃園市立楊梅高級中學</strong> 語音電話分機一覽表系統
+      </div>
+      <div>
+        校址：326007 桃園市楊梅區高獅路1號 ｜ 總機：03-4789618 ｜ 傳真：03-4856117 (校長室)
+      </div>
+      <div class="footer-links">
+        <a href="javascript:void(0)" onclick="window.print()">🖨️ 列印分機表</a>
+        <a href="javascript:void(0)" onclick="toggleDialpad()">🔢 快速撥號盤</a>
+        <a href="tel:034789618">📞 撥打學校總機</a>
+        <a href="javascript:void(0)" onclick="window.scrollTo({top:0, behavior:'smooth'})">⬆️ 回到頂端</a>
+      </div>
+      <div style="font-size:0.75rem; color:#94a3b8; margin-top:0.5rem">
+        資料來源：總務處 115/09/07 編製版本 ｜ 響應式網頁設計相容電腦、平板、智慧型手機
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       Application Data & JavaScript Engine
+       ========================================================================== -->
+  <script>
+    /**
+     * Complete Dataset Extracted directly from 桃園市立楊梅高級中學語音電話分機一覽表.pdf
+     */
+    const SCHOOL_DATA = [
+      // 1. 校長室
+      { id: 'p1', dept: '校長室', group: '校長室與行政', title: '校長', name: '鍾校長', ext: '1101', building: '行政大樓', floor: '校長室', tags: ['首長', '校長', '行政'], color: 'admin', isChief: true },
+      { id: 'p2', dept: '校長室', group: '校長室與行政', title: '秘書', name: '黃秘書', ext: '1102', building: '行政大樓', floor: '校長室', tags: ['秘書', '行政'], color: 'admin', isChief: true },
+      { id: 'p3', dept: '校長室', group: '校長室與行政', title: '技工', name: '劉小姐', ext: '1103', building: '行政大樓', floor: '校長室', tags: ['技工'], color: 'admin' },
+      { id: 'p4', dept: '校長室', group: '校長室與行政', title: '校長宿舍', name: '', ext: '1104', building: '校長宿舍', floor: '', tags: ['宿舍'], color: 'admin' },
+
+      // 2. 協力組織
+      { id: 's1', dept: '協力組織', group: '校長室與行政', title: '警衛室', name: '', ext: '1110', building: '校門口', floor: '1F', tags: ['保全', '大門', '守衛', '緊急'], color: 'admin', isEmergency: true },
+      { id: 's2', dept: '協力組織', group: '校長室與行政', title: '聯合辦公室', name: '', ext: '1112', building: '行政大樓', floor: '', tags: ['辦公室'], color: 'admin' },
+      { id: 's3', dept: '協力組織', group: '校長室與行政', title: '第一會議室', name: '', ext: '1113', building: '行政大樓', floor: '', tags: ['會議室'], color: 'admin' },
+      { id: 's4', dept: '協力組織', group: '校長室與行政', title: '交通安全教室', name: '', ext: '1114', building: '專科教室', floor: '', tags: ['交安'], color: 'admin' },
+      { id: 's5', dept: '協力組織', group: '校長室與行政', title: '第二會議室', name: '', ext: '1115', building: '行政大樓', floor: '', tags: ['會議室'], color: 'admin' },
+
+      // 3. 人事室
+      { id: 'hr1', dept: '人事室', group: '校長室與行政', title: '主任', name: '邱主任', ext: '1121', directTel: '4784103', fax: '4755774', building: '行政大樓', floor: '', tags: ['人事', '主任', '考績', '請假'], color: 'admin', isChief: true },
+      { id: 'hr2', dept: '人事室', group: '校長室與行政', title: '組員', name: '陳先生', ext: '1122', directTel: '4784103', fax: '4755774', building: '行政大樓', floor: '', tags: ['人事'], color: 'admin' },
+
+      // 4. 會計室
+      { id: 'ac1', dept: '會計室', group: '校長室與行政', title: '主任', name: '林主任', ext: '1131', directTel: '4789683', fax: '4782322', building: '行政大樓', floor: '', tags: ['會計', '主任', '經費', '預算'], color: 'admin', isChief: true },
+      { id: 'ac2', dept: '會計室', group: '校長室與行政', title: '組員', name: '張小姐', ext: '1132', directTel: '4789683', fax: '4782322', building: '行政大樓', floor: '', tags: ['會計'], color: 'admin' },
+      { id: 'ac3', dept: '會計室', group: '校長室與行政', title: '佐理員', name: '陳小姐', ext: '1133', directTel: '4789683', fax: '4782322', building: '行政大樓', floor: '', tags: ['會計'], color: 'admin' },
+
+      // 5. 教務處
+      { id: 'ed1', dept: '教務處', group: '教務處', title: '主任', name: '李主任', ext: '1201', directTel: '4783574', fax: '4882675', building: '行政大樓', floor: '', tags: ['教務', '主任'], color: 'academic', isChief: true },
+      { id: 'ed2', dept: '教務處', group: '教務處', title: '教學組長', name: '邱組長', ext: '1211', directTel: '4783574', fax: '4882675', building: '行政大樓', floor: '', tags: ['教學', '排課', '課務'], color: 'academic', isChief: true },
+      { id: 'ed3', dept: '教務處', group: '教務處', title: '教學組 幹事', name: '張小姐', ext: '1212', directTel: '4783574', fax: '4882675', building: '行政大樓', floor: '', tags: ['教學', '幹事'], color: 'academic' },
+      { id: 'ed4', dept: '教務處', group: '教務處', title: '印刷室', name: '陳先生', ext: '1213', building: '行政大樓', floor: '', tags: ['印刷', '考卷'], color: 'academic' },
+      { id: 'ed5', dept: '教務處', group: '教務處', title: '註冊組長', name: '賴組長', ext: '1221', directTel: '4783574', fax: '4882675', building: '行政大樓', floor: '', tags: ['註冊', '成績', '學籍', '升學'], color: 'academic', isChief: true },
+      { id: 'ed6', dept: '教務處', group: '教務處', title: '註冊組 幹事', name: '曾小姐', ext: '1222', directTel: '4783574', fax: '4882675', building: '行政大樓', floor: '', tags: ['註冊', '幹事'], color: 'academic' },
+      { id: 'ed7', dept: '教務處', group: '教務處', title: '設備組長', name: '鄭組長', ext: '1231', directTel: '4783574', fax: '4882675', building: '行政大樓', floor: '', tags: ['設備', '教科書'], color: 'academic', isChief: true },
+      { id: 'ed8', dept: '教務處', group: '教務處', title: '設備組 助理員', name: '謝小姐', ext: '1232', building: '行政大樓', floor: '', tags: ['設備'], color: 'academic' },
+      { id: 'ed9', dept: '教務處', group: '教務處', title: '設備組 書記', name: '吳先生', ext: '1233', building: '行政大樓', floor: '', tags: ['設備', '書記'], color: 'academic' },
+      { id: 'ed10', dept: '教務處', group: '教務處', title: '數位前導助理', name: '王小姐', ext: '1234', building: '行政大樓', floor: '', tags: ['數位前導', '專案'], color: 'academic' },
+      { id: 'ed11', dept: '教務處', group: '教務處', title: '實驗研究組長', name: '邱組長', ext: '1241', directTel: '4783574', fax: '4882675', building: '行政大樓', floor: '', tags: ['實研組', '研究'], color: 'academic', isChief: true },
+      { id: 'ed12', dept: '教務處', group: '教務處', title: '實研組 幹事', name: '宋先生', ext: '1242', building: '行政大樓', floor: '', tags: ['實研組'], color: 'academic' },
+      { id: 'ed13', dept: '教務處', group: '教務處', title: '均質化專案助理', name: '', ext: '1243', building: '行政大樓', floor: '', tags: ['均質化', '專案'], color: 'academic' },
+      { id: 'ed14', dept: '教務處', group: '教務處', title: '學習歷程檔案助理', name: '楊小姐', ext: '1244', building: '行政大樓', floor: '', tags: ['學習歷程', '歷程檔案'], color: 'academic' },
+      { id: 'ed15', dept: '教務處', group: '教務處', title: '試務組組長', name: '蘇組長', ext: '1251', directTel: '4783574', fax: '4882675', building: '行政大樓', floor: '', tags: ['試務', '考試', '段考'], color: 'academic', isChief: true },
+      { id: 'ed16', dept: '教務處', group: '教務處', title: '試務組 幹事', name: '蔡小姐', ext: '1252', building: '行政大樓', floor: '', tags: ['試務'], color: 'academic' },
+      { id: 'ed17', dept: '教務處', group: '教務處', title: '教務處分機', name: '', ext: '1261', building: '行政大樓', floor: '', tags: ['教務備用'], color: 'academic' },
+      { id: 'ed18', dept: '教務處', group: '教務處', title: '英語教師', name: '', ext: '1262', building: '行政大樓', floor: '', tags: ['英語', '雙語'], color: 'academic' },
+      { id: 'ed19', dept: '教務處', group: '教務處', title: '雙語助理', name: '葉先生', ext: '1263', building: '行政大樓', floor: '', tags: ['雙語', '助理'], color: 'academic' },
+      { id: 'ed20', dept: '教務處', group: '教務處', title: '雙語教師', name: '高老師', ext: '1264', building: '行政大樓', floor: '', tags: ['雙語', '外師'], color: 'academic' },
+
+      // 6. 總務處
+      { id: 'ga1', dept: '總務處', group: '總務處', title: '主任', name: '劉主任', ext: '1401', directTel: '4783349', fax: '4780164', building: '行政大樓', floor: '', tags: ['總務', '主任'], color: 'general', isChief: true },
+      { id: 'ga2', dept: '總務處', group: '總務處', title: '文書組長', name: '黃組長', ext: '1411', directTel: '4783349', fax: '4780164', building: '行政大樓', floor: '', tags: ['文書', '公文', '印信'], color: 'general', isChief: true },
+      { id: 'ga3', dept: '總務處', group: '總務處', title: '文書組 臨時人員', name: '鍾小姐', ext: '1412', building: '行政大樓', floor: '', tags: ['文書'], color: 'general' },
+      { id: 'ga4', dept: '總務處', group: '總務處', title: '出納組長', name: '黃組長', ext: '1421', directTel: '4783349', fax: '4780164', building: '行政大樓', floor: '', tags: ['出納', '學費', '薪資', '收據'], color: 'general', isChief: true },
+      { id: 'ga5', dept: '總務處', group: '總務處', title: '庶務組長', name: '劉組長', ext: '1431', directTel: '4783349', fax: '4780164', building: '行政大樓', floor: '', tags: ['庶務', '修繕', '水電', '財產'], color: 'general', isChief: true },
+      { id: 'ga6', dept: '總務處', group: '總務處', title: '財管管理員', name: '謝先生', ext: '1432', building: '行政大樓', floor: '', tags: ['財產', '財管'], color: 'general' },
+      { id: 'ga7', dept: '總務處', group: '總務處', title: '採購幹事', name: '張先生', ext: '1433', building: '行政大樓', floor: '', tags: ['採購', '招標'], color: 'general' },
+      { id: 'ga8', dept: '總務處', group: '總務處', title: '學務創新人力', name: '彭先生', ext: '1434', building: '行政大樓', floor: '', tags: ['創新人力', '總務'], color: 'general' },
+      { id: 'ga9', dept: '總務處', group: '總務處', title: '總務處 臨時人員', name: '宋先生', ext: '1435', building: '行政大樓', floor: '', tags: ['修繕', '臨時人員'], color: 'general' },
+
+      // 7. 員生社
+      { id: 'coop1', dept: '員生社', group: '總務處', title: '員生社', name: '林小姐', ext: '1491', directTel: '4750453', building: '員生社', floor: '', tags: ['福利社', '合作社', '制服', '午餐'], color: 'general' },
+
+      // 8. 導師辦公室
+      { id: 'tr1', dept: '導師辦公室', group: '導師辦公室', title: '高一導師室', name: '悅知樓1樓', ext: '1361, 1365', building: '悅知樓', floor: '1F', tags: ['導師', '高一', '高一導師'], color: 'teachers' },
+      { id: 'tr2', dept: '導師辦公室', group: '導師辦公室', title: '高一導師室', name: '悅知樓2樓', ext: '1366', building: '悅知樓', floor: '2F', tags: ['導師', '高一', '高一導師'], color: 'teachers' },
+      { id: 'tr3', dept: '導師辦公室', group: '導師辦公室', title: '高二導師室', name: '悅知樓3樓', ext: '1362, 1364', building: '悅知樓', floor: '3F', tags: ['導師', '高二', '高二導師'], color: 'teachers' },
+      { id: 'tr4', dept: '導師辦公室', group: '導師辦公室', title: '高三導師室', name: '日新樓1樓', ext: '1363, 1367', building: '日新樓', floor: '1F', tags: ['導師', '高三', '高三導師'], color: 'teachers' },
+
+      // 9. 專任教師辦公室
+      { id: 'ft1', dept: '專任教師辦公室', group: '專任教師辦公室', title: '專一辦公室', name: '蘊慧樓1樓', ext: '1271, 1275', building: '蘊慧樓', floor: '1F', tags: ['專任', '教師', '專一'], color: 'teachers' },
+      { id: 'ft2', dept: '專任教師辦公室', group: '專任教師辦公室', title: '專二辦公室', name: '蘊慧樓2樓', ext: '1272', building: '蘊慧樓', floor: '2F', tags: ['專任', '教師', '專二'], color: 'teachers' },
+      { id: 'ft3', dept: '專任教師辦公室', group: '專任教師辦公室', title: '專三辦公室', name: '日新樓2樓', ext: '1273', building: '日新樓', floor: '2F', tags: ['專任', '教師', '專三'], color: 'teachers' },
+      { id: 'ft4', dept: '專任教師辦公室', group: '專任教師辦公室', title: '專四辦公室', name: '日新樓3樓', ext: '1274', building: '日新樓', floor: '3F', tags: ['專任', '教師', '專四'], color: 'teachers' },
+
+      // 10. 實驗室
+      { id: 'lab1', dept: '實驗室', group: '實驗室', title: '化學實驗室', name: '', ext: '1373', building: '實驗大樓', floor: '', tags: ['自然', '化學', '實驗'], color: 'labs' },
+      { id: 'lab2', dept: '實驗室', group: '實驗室', title: '基礎理化實驗室', name: '', ext: '1374', building: '實驗大樓', floor: '', tags: ['理化', '自然'], color: 'labs' },
+      { id: 'lab3', dept: '實驗室', group: '實驗室', title: '物理實驗室', name: '', ext: '1375', building: '實驗大樓', floor: '', tags: ['物理', '實驗'], color: 'labs' },
+      { id: 'lab4', dept: '實驗室', group: '實驗室', title: '生物實驗室', name: '', ext: '1376', building: '實驗大樓', floor: '', tags: ['生物', '實驗'], color: 'labs' },
+      { id: 'lab5', dept: '實驗室', group: '實驗室', title: '基礎生物實驗室', name: '', ext: '1378', building: '實驗大樓', floor: '', tags: ['生物'], color: 'labs' },
+      { id: 'lab6', dept: '實驗室', group: '實驗室', title: '地科實驗室', name: '', ext: '1379', building: '實驗大樓', floor: '', tags: ['地球科學', '地科'], color: 'labs' },
+
+      // 11. 專科教室
+      { id: 'sp1', dept: '專科教室', group: '專科教室', title: '啟明樓校史室', name: '', ext: '1284', building: '啟明樓', floor: '', tags: ['校史室', '啟明樓'], color: 'labs' },
+      { id: 'sp2', dept: '專科教室', group: '專科教室', title: '語言教室', name: '', ext: '1285', building: '專科教室', floor: '', tags: ['外語', '英文'], color: 'labs' },
+      { id: 'sp3', dept: '專科教室', group: '專科教室', title: '蘊慧樓電腦機房', name: '', ext: '1286', building: '蘊慧樓', floor: '', tags: ['機房', '網路', '伺服器'], color: 'labs' },
+      { id: 'sp4', dept: '專科教室', group: '專科教室', title: '電腦教室一', name: '', ext: '1287', building: '專科教室', floor: '', tags: ['電腦', '資訊'], color: 'labs' },
+      { id: 'sp5', dept: '專科教室', group: '專科教室', title: '視聽一教室', name: '', ext: '1288', building: '專科教室', floor: '', tags: ['視聽'], color: 'labs' },
+      { id: 'sp6', dept: '專科教室', group: '專科教室', title: '電腦教室二', name: '', ext: '1289', building: '專科教室', floor: '', tags: ['電腦'], color: 'labs' },
+      { id: 'sp7', dept: '專科教室', group: '專科教室', title: '美術教室', name: '', ext: '1291', building: '專科教室', floor: '', tags: ['美術', '藝術'], color: 'labs' },
+      { id: 'sp8', dept: '專科教室', group: '專科教室', title: '科技應用教室', name: '', ext: '1292', building: '專科教室', floor: '', tags: ['生活科技'], color: 'labs' },
+      { id: 'sp9', dept: '專科教室', group: '專科教室', title: '新興科技推廣教室', name: '', ext: '1293', building: '專科教室', floor: '', tags: ['新興科技'], color: 'labs' },
+      { id: 'sp10', dept: '專科教室', group: '專科教室', title: '雙語教室', name: '', ext: '1294', building: '專科教室', floor: '', tags: ['雙語'], color: 'labs' },
+      { id: 'sp11', dept: '專科教室', group: '專科教室', title: '電腦教室三', name: '', ext: '1295', building: '專科教室', floor: '', tags: ['電腦'], color: 'labs' },
+      { id: 'sp12', dept: '專科教室', group: '專科教室', title: '探究與實作教室', name: '', ext: '1296', building: '專科教室', floor: '', tags: ['探究與實作'], color: 'labs' },
+      { id: 'sp13', dept: '專科教室', group: '專科教室', title: '環境教育中心', name: '', ext: '1297', building: '專科教室', floor: '', tags: ['環境教育'], color: 'labs' },
+
+      // 12. 日新樓專科教室
+      { id: 'rx1', dept: '日新樓專科教室', group: '日新樓專科教室', title: '英語情境教室', name: '', ext: '1711', building: '日新樓', floor: '', tags: ['英語', '情境'], color: 'labs' },
+      { id: 'rx2', dept: '日新樓專科教室', group: '日新樓專科教室', title: '日新樓展演中心', name: '', ext: '1712', building: '日新樓', floor: '', tags: ['展演', '表演'], color: 'labs' },
+      { id: 'rx3', dept: '日新樓專科教室', group: '日新樓專科教室', title: '護理教室', name: '', ext: '1751', building: '日新樓', floor: '', tags: ['護理'], color: 'labs' },
+      { id: 'rx4', dept: '日新樓專科教室', group: '日新樓專科教室', title: '計概教室', name: '', ext: '1752', building: '日新樓', floor: '', tags: ['計算機概論', '計概'], color: 'labs' },
+      { id: 'rx5', dept: '日新樓專科教室', group: '日新樓專科教室', title: '音樂教室', name: '', ext: '1761', building: '日新樓', floor: '', tags: ['音樂', '鋼琴'], color: 'labs' },
+      { id: 'rx6', dept: '日新樓專科教室', group: '日新樓專科教室', title: '藝術生活教室', name: '', ext: '1764', building: '日新樓', floor: '', tags: ['藝術生活'], color: 'labs' },
+      { id: 'rx7', dept: '日新樓專科教室', group: '日新樓專科教室', title: '視覺藝術教室', name: '', ext: '1765', building: '日新樓', floor: '', tags: ['視覺藝術'], color: 'labs' },
+
+      // 13. 御風樓
+      { id: 'yf1', dept: '御風樓', group: '御風樓', title: '御風 2-1', name: '', ext: '2421', building: '御風樓', floor: '2F', tags: ['御風樓'], color: 'buildings' },
+      { id: 'yf2', dept: '御風樓', group: '御風樓', title: '御風 2-2', name: '', ext: '2422', building: '御風樓', floor: '2F', tags: ['御風樓'], color: 'buildings' },
+      { id: 'yf3', dept: '御風樓', group: '御風樓', title: '御風 2-3', name: '', ext: '2423', building: '御風樓', floor: '2F', tags: ['御風樓'], color: 'buildings' },
+      { id: 'yf4', dept: '御風樓', group: '御風樓', title: '御風 3-1', name: '', ext: '2431', building: '御風樓', floor: '3F', tags: ['御風樓'], color: 'buildings' },
+      { id: 'yf5', dept: '御風樓', group: '御風樓', title: '御風 3-2', name: '', ext: '2432', building: '御風樓', floor: '3F', tags: ['御風樓'], color: 'buildings' },
+      { id: 'yf6', dept: '御風樓', group: '御風樓', title: '御風 3-3', name: '', ext: '2433', building: '御風樓', floor: '3F', tags: ['御風樓'], color: 'buildings' },
+      { id: 'yf7', dept: '御風樓', group: '御風樓', title: '御風 3-4', name: '', ext: '2434', building: '御風樓', floor: '3F', tags: ['御風樓'], color: 'buildings' },
+      { id: 'yf8', dept: '御風樓', group: '御風樓', title: '社團教室 2', name: '', ext: '2435', building: '御風樓', floor: '', tags: ['社團'], color: 'buildings' },
+
+      // 14. 生科大樓
+      { id: 'ls1', dept: '生科大樓', group: '生科大樓', title: '體育器材室', name: '', ext: '1811', building: '生科大樓', floor: '', tags: ['體育', '器材', '球類'], color: 'buildings' },
+      { id: 'ls2', dept: '生科大樓', group: '生科大樓', title: '生活科技教室', name: '', ext: '1821', building: '生科大樓', floor: '', tags: ['生科', '工藝'], color: 'buildings' },
+      { id: 'ls3', dept: '生科大樓', group: '生科大樓', title: '烹飪教室', name: '', ext: '1822', building: '生科大樓', floor: '', tags: ['烹飪', '家政'], color: 'buildings' },
+      { id: 'ls4', dept: '生科大樓', group: '生科大樓', title: '家政教室', name: '', ext: '1822', building: '生科大樓', floor: '', tags: ['家政'], color: 'buildings' },
+
+      // 15. 實習處
+      { id: 'pr1', dept: '實習處', group: '實習處', title: '主任', name: '簡主任', ext: '1701', building: '實習處', floor: '', tags: ['實習', '技職', '主任'], color: 'practice', isChief: true },
+      { id: 'pr2', dept: '實習處', group: '實習處', title: '實習就業組長', name: '蔡組長', ext: '1702', building: '實習處', floor: '', tags: ['就業', '實習', '檢定'], color: 'practice', isChief: true },
+      { id: 'pr3', dept: '實習處', group: '實習處', title: '資訊科主任', name: '廖主任', ext: '1703', building: '實習處', floor: '', tags: ['資訊科', '科主任'], color: 'practice', isChief: true },
+      { id: 'pr4', dept: '實習處', group: '實習處', title: '技佐', name: '林先生', ext: '1704', building: '實習處', floor: '', tags: ['技佐', '實習'], color: 'practice' },
+      { id: 'pr5', dept: '實習處', group: '實習處', title: '電子科主任', name: '余主任', ext: '1705', building: '實習處', floor: '', tags: ['電子科', '科主任'], color: 'practice', isChief: true },
+      { id: 'pr6', dept: '實習處', group: '實習處', title: '技士', name: '卓小姐', ext: '1706', building: '實習處', floor: '', tags: ['技士', '實習'], color: 'practice' },
+
+      // 16. 學務處
+      { id: 'sa1', dept: '學務處', group: '學務處', title: '學務主任', name: '呂主任', ext: '1301', directTel: '4758950', fax: '4757034', building: '行政大樓', floor: '', tags: ['學務', '主任'], color: 'student', isChief: true },
+      { id: 'sa2', dept: '學務處', group: '學務處', title: '午餐秘書', name: '李老師', ext: '1302', directTel: '4758950', fax: '4757034', building: '行政大樓', floor: '', tags: ['營養午餐', '午餐'], color: 'student' },
+      { id: 'sa3', dept: '學務處', group: '學務處', title: '學務創新人力', name: '呂先生', ext: '1303', building: '行政大樓', floor: '', tags: ['創新人力'], color: 'student' },
+      { id: 'sa4', dept: '學務處', group: '學務處', title: '訓育組長', name: '簡組長', ext: '1311', directTel: '4758950', fax: '4757034', building: '行政大樓', floor: '', tags: ['訓育', '週會', '校外教學'], color: 'student', isChief: true },
+      { id: 'sa5', dept: '學務處', group: '學務處', title: '訓育組 幹事', name: '傅小姐', ext: '1312', building: '行政大樓', floor: '', tags: ['訓育'], color: 'student' },
+      { id: 'sa6', dept: '學務處', group: '學務處', title: '活動組長', name: '魏組長', ext: '1321', directTel: '4758950', fax: '4757034', building: '行政大樓', floor: '', tags: ['課外活動', '社團'], color: 'student', isChief: true },
+      { id: 'sa7', dept: '學務處', group: '學務處', title: '學務創新人力', name: '林先生', ext: '1322', building: '行政大樓', floor: '', tags: ['活動', '創新人力'], color: 'student' },
+      { id: 'sa8', dept: '學務處', group: '學務處', title: '體育組長', name: '廖組長', ext: '1331', directTel: '4758950', fax: '4757034', building: '行政大樓', floor: '', tags: ['體育', '運動會', '體適能'], color: 'student', isChief: true },
+      { id: 'sa9', dept: '學務處', group: '學務處', title: '游泳池', name: '陳先生', ext: '1333', building: '游泳池', floor: '', tags: ['游泳', '泳池'], color: 'student' },
+      { id: 'sa10', dept: '學務處', group: '學務處', title: '活動中心 管理員', name: '鍾小姐', ext: '1334', building: '活動中心', floor: '', tags: ['管理員'], color: 'student' },
+      { id: 'sa11', dept: '學務處', group: '學務處', title: '跆拳道館', name: '', ext: '1335', building: '跆拳道館', floor: '', tags: ['跆拳道'], color: 'student' },
+      { id: 'sa12', dept: '學務處', group: '學務處', title: '衛生組長', name: '詹組長', ext: '1341', directTel: '4758950', fax: '4757034', building: '行政大樓', floor: '', tags: ['衛生', '打掃', '資源回收', '環保'], color: 'student', isChief: true },
+      { id: 'sa13', dept: '學務處', group: '學務處', title: '護理師(健康中心)', name: '陳小姐', ext: '1342', directTel: '4758950', building: '健康中心', floor: '1F', tags: ['護理師', '受傷', '就醫', '健康中心', '緊急'], color: 'student', isEmergency: true },
+      { id: 'sa14', dept: '學務處', group: '學務處', title: '學務創新人力', name: '張先生', ext: '1343', building: '行政大樓', floor: '', tags: ['衛生'], color: 'student' },
+      { id: 'sa15', dept: '學務處', group: '學務處', title: '健康中心', name: '陳小姐', ext: '1119', building: '健康中心', floor: '1F', tags: ['健康中心', '保健室', '急救', '傷病', '緊急'], color: 'student', isEmergency: true },
+      { id: 'sa16', dept: '學務處', group: '學務處', title: '禮堂準備室', name: '', ext: '1324', building: '活動中心', floor: '', tags: ['禮堂'], color: 'student' },
+
+      // 17. 校安中心
+      { id: 'sc1', dept: '校安中心', group: '學務處', title: '校安中心', name: '廖先生', ext: '1351', directTel: '4854998', fax: '4780428', building: '校安中心', floor: '', tags: ['校安', '教官', '值勤', '緊急'], color: 'student', isEmergency: true },
+      { id: 'sc2', dept: '校安中心', group: '學務處', title: '生輔組長', name: '張組長', ext: '1352', directTel: '4854998', fax: '4780428', building: '校安中心', floor: '', tags: ['生活輔導', '生輔', '請假', '獎懲', '校安', '緊急'], color: 'student', isChief: true, isEmergency: true },
+      { id: 'sc3', dept: '校安中心', group: '學務處', title: '學務創新人力', name: '李先生', ext: '1353', directTel: '4854998', fax: '4780428', building: '校安中心', floor: '', tags: ['校安', '生輔'], color: 'student', isEmergency: true },
+      { id: 'sc4', dept: '校安中心', group: '學務處', title: '學務創新人力', name: '陳先生', ext: '1354', directTel: '4854998', fax: '4780428', building: '校安中心', floor: '', tags: ['校安', '生輔'], color: 'student', isEmergency: true },
+      { id: 'sc5', dept: '校安中心', group: '學務處', title: '生輔組 幹事', name: '范小姐', ext: '1355', directTel: '4854998', fax: '4780428', building: '校安中心', floor: '', tags: ['生輔', '校安'], color: 'student' },
+      { id: 'sc6', dept: '校安中心', group: '學務處', title: '學務創新人力', name: '郭先生', ext: '1356', directTel: '4854998', fax: '4780428', building: '校安中心', floor: '', tags: ['校安', '生輔'], color: 'student', isEmergency: true },
+      { id: 'sc7', dept: '校安中心', group: '學務處', title: '學務創新人力', name: '彭先生', ext: '1357', directTel: '4854998', fax: '4780428', building: '校安中心', floor: '', tags: ['校安', '生輔'], color: 'student', isEmergency: true },
+
+      // 18. 輔導室
+      { id: 'co1', dept: '輔導室', group: '輔導室', title: '輔導主任', name: '林主任', ext: '1503', directTel: '4758437', building: '輔導室', floor: '', tags: ['輔導', '諮商', '主任'], color: 'counsel', isChief: true },
+      { id: 'co2', dept: '輔導室', group: '輔導室', title: '專任輔導教師', name: '陳老師', ext: '1504', directTel: '4758437', building: '輔導室', floor: '', tags: ['輔導', '心理諮商'], color: 'counsel' },
+      { id: 'co3', dept: '輔導室', group: '輔導室', title: '專任輔導教師', name: '吳老師', ext: '1507', directTel: '4758437', building: '輔導室', floor: '', tags: ['輔導', '心理諮商'], color: 'counsel' },
+      { id: 'co4', dept: '輔導室', group: '輔導室', title: '專任輔導教師', name: '金老師', ext: '1501', directTel: '4758437', building: '輔導室', floor: '', tags: ['輔導', '心理諮商'], color: 'counsel' },
+      { id: 'co5', dept: '輔導室', group: '輔導室', title: '專任輔導教師', name: '陳老師', ext: '1502', directTel: '4758437', building: '輔導室', floor: '', tags: ['輔導', '心理諮商'], color: 'counsel' },
+      { id: 'co6', dept: '輔導室', group: '輔導室', title: '特教教師 1', name: '何老師', ext: '1505', building: '輔導室', floor: '', tags: ['特殊教育', '特教'], color: 'counsel' },
+      { id: 'co7', dept: '輔導室', group: '輔導室', title: '特教教師 2', name: '林老師', ext: '1506', building: '輔導室', floor: '', tags: ['特殊教育', '特教'], color: 'counsel' },
+      { id: 'co8', dept: '輔導室', group: '輔導室', title: '特教教師 3', name: '曾老師', ext: '1511', building: '輔導室', floor: '', tags: ['特殊教育', '特教'], color: 'counsel' },
+      { id: 'co9', dept: '輔導室', group: '輔導室', title: '生涯資訊室', name: '', ext: '1508', building: '輔導室', floor: '', tags: ['生涯', '升學資訊'], color: 'counsel' },
+      { id: 'co10', dept: '輔導室', group: '輔導室', title: '團體諮商室', name: '', ext: '1509', building: '輔導室', floor: '', tags: ['團諮', '諮商室'], color: 'counsel' },
+      { id: 'co11', dept: '輔導室', group: '輔導室', title: '學習中心', name: '', ext: '1510', building: '輔導室', floor: '', tags: ['學習中心', '特教資源班'], color: 'counsel' },
+
+      // 19. 圖書館
+      { id: 'lib1', dept: '圖書館', group: '圖書館', title: '圖書館主任', name: '施主任', ext: '1601', directTel: '4780586', building: '圖書館', floor: '', tags: ['圖書館', '閱讀', '主任'], color: 'library', isChief: true },
+      { id: 'lib2', dept: '圖書館', group: '圖書館', title: '讀者服務組長', name: '何組長', ext: '1602', directTel: '4780586', building: '圖書館', floor: '', tags: ['借書', '還書', '讀服組'], color: 'library', isChief: true },
+      { id: 'lib3', dept: '圖書館', group: '圖書館', title: '資訊媒體組長', name: '賴組長', ext: '1603', directTel: '4780586', building: '圖書館', floor: '', tags: ['資訊', '網管', '資媒組'], color: 'library', isChief: true },
+      { id: 'lib4', dept: '圖書館', group: '圖書館', title: '讀者服務櫃台 幹事', name: '呂小姐', ext: '1605', directTel: '4780586', building: '圖書館', floor: '1F', tags: ['借還書', '櫃台'], color: 'library' },
+      { id: 'lib5', dept: '圖書館', group: '圖書館', title: '喜閱學堂', name: '', ext: '1606', building: '圖書館', floor: '', tags: ['喜閱學堂', '研討室'], color: 'library' },
+      { id: 'lib6', dept: '圖書館', group: '圖書館', title: '演藝廳', name: '', ext: '1607', building: '圖書館', floor: '', tags: ['演藝廳', '演講廳'], color: 'library' }
+    ];
+
+    /**
+     * Color themes configuration map for departments
+     */
+    const DEPT_THEMES = {
+      'admin': { color: 'var(--dept-admin)', bg: 'var(--dept-admin-bg)', border: 'var(--dept-admin-border)', icon: '🏛️' },
+      'academic': { color: 'var(--dept-academic)', bg: 'var(--dept-academic-bg)', border: 'var(--dept-academic-border)', icon: '📚' },
+      'student': { color: 'var(--dept-student)', bg: 'var(--dept-student-bg)', border: 'var(--dept-student-border)', icon: '🏃' },
+      'general': { color: 'var(--dept-general)', bg: 'var(--dept-general-bg)', border: 'var(--dept-general-border)', icon: '🔧' },
+      'practice': { color: 'var(--dept-practice)', bg: 'var(--dept-practice-bg)', border: 'var(--dept-practice-border)', icon: '💻' },
+      'counsel': { color: 'var(--dept-counsel)', bg: 'var(--dept-counsel-bg)', border: 'var(--dept-counsel-border)', icon: '💖' },
+      'library': { color: 'var(--dept-library)', bg: 'var(--dept-library-bg)', border: 'var(--dept-library-border)', icon: '📖' },
+      'teachers': { color: 'var(--dept-teachers)', bg: 'var(--dept-teachers-bg)', border: 'var(--dept-teachers-border)', icon: '🎓' },
+      'labs': { color: 'var(--dept-labs)', bg: 'var(--dept-labs-bg)', border: 'var(--dept-labs-border)', icon: '🧪' },
+      'buildings': { color: 'var(--dept-buildings)', bg: 'var(--dept-buildings-bg)', border: 'var(--dept-buildings-border)', icon: '🏢' }
+    };
+
+    /**
+     * Web Audio API Synthesizer (No external sound files required)
+     * Provides click, copy success chime, DTMF telephone dial tones, pop
+     */
+    class SoundEngine {
+      constructor() {
+        this.ctx = null;
+        this.enabled = true;
+        // DTMF Standard Frequencies (Row Hz, Col Hz)
+        this.dtmfFreqs = {
+          '1': [697, 1209], '2': [697, 1336], '3': [697, 1477],
+          '4': [770, 1209], '5': [770, 1336], '6': [770, 1477],
+          '7': [852, 1209], '8': [852, 1336], '9': [852, 1477],
+          '*': [941, 1209], '0': [941, 1336], '#': [941, 1477]
+        };
+      }
+
+      initCtx() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) {
+            this.ctx = new AudioContext();
+          }
+        }
+        if (this.ctx && this.ctx.state === 'suspended') {
+          this.ctx.resume();
+        }
+      }
+
+      playClick() {
+        if (!this.enabled) return;
+        this.initCtx();
+        if (!this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(800, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(400, this.ctx.currentTime + 0.05);
+          gain.gain.setValueAtTime(0.12, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.05);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.05);
+        } catch(e) {}
+      }
+
+      playCopyChime() {
+        if (!this.enabled) return;
+        this.initCtx();
+        if (!this.ctx) return;
+        try {
+          // Cheerful ascending arpeggio (C6 -> E6 -> G6)
+          const notes = [1046.5, 1318.5, 1567.98];
+          notes.forEach((freq, idx) => {
+            const osc = this.ctx.createOscillator();
+            const gain = this.ctx.createGain();
+            const startTime = this.ctx.currentTime + idx * 0.07;
+            osc.type = 'triangle';
+            osc.frequency.setValueAtTime(freq, startTime);
+            gain.gain.setValueAtTime(0.15, startTime);
+            gain.gain.exponentialRampToValueAtTime(0.001, startTime + 0.18);
+            osc.connect(gain);
+            gain.connect(this.ctx.destination);
+            osc.start(startTime);
+            osc.stop(startTime + 0.18);
+          });
+        } catch(e) {}
+      }
+
+      playDtmf(digit) {
+        if (!this.enabled) return;
+        this.initCtx();
+        if (!this.ctx) return;
+        const freqs = this.dtmfFreqs[digit] || [700, 1200];
+        try {
+          const osc1 = this.ctx.createOscillator();
+          const osc2 = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+
+          osc1.type = 'sine';
+          osc1.frequency.setValueAtTime(freqs[0], this.ctx.currentTime);
+          osc2.type = 'sine';
+          osc2.frequency.setValueAtTime(freqs[1], this.ctx.currentTime);
+
+          gain.gain.setValueAtTime(0.15, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.15);
+
+          osc1.connect(gain);
+          osc2.connect(gain);
+          gain.connect(this.ctx.destination);
+
+          osc1.start();
+          osc2.start();
+          osc1.stop(this.ctx.currentTime + 0.15);
+          osc2.stop(this.ctx.currentTime + 0.15);
+        } catch(e) {}
+      }
+
+      playPop() {
+        if (!this.enabled) return;
+        this.initCtx();
+        if (!this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'sine';
+          osc.frequency.setValueAtTime(450, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(900, this.ctx.currentTime + 0.06);
+          gain.gain.setValueAtTime(0.12, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.06);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.06);
+        } catch(e) {}
+      }
+    }
+
+    const sound = new SoundEngine();
+
+    /**
+     * Application State
+     */
+    const state = {
+      searchQuery: '',
+      activeCategory: 'all',     // 'all' or specific dept
+      activeQuickFilter: 'all',  // 'all', 'favs', 'emergency', 'chiefs', 'directlines', 'homeroom', 'labs'
+      viewMode: 'grouped',       // 'grouped', 'grid', 'table'
+      favorites: new Set(),
+      fontScale: 'normal',       // 'normal', 'large', 'xlarge'
+      dialpadInput: ''
+    };
+
+    // Load saved preferences from LocalStorage
+    try {
+      const savedFavs = localStorage.getItem('tyhs_favs');
+      if (savedFavs) {
+        state.favorites = new Set(JSON.parse(savedFavs));
+      }
+      const savedFont = localStorage.getItem('tyhs_font');
+      if (savedFont) {
+        state.fontScale = savedFont;
+        document.body.className = `font-${savedFont}`;
+      }
+      const savedSound = localStorage.getItem('tyhs_sound');
+      if (savedSound !== null) {
+        sound.enabled = savedSound === 'true';
+      }
+    } catch(e) {}
+
+    /**
+     * DOM Elements Cache
+     */
+    const dom = {
+      searchInput: document.getElementById('searchInput'),
+      clearSearchBtn: document.getElementById('clearSearchBtn'),
+      contentContainer: document.getElementById('contentContainer'),
+      categoryTabs: document.getElementById('categoryTabs'),
+      quickPills: document.querySelectorAll('.quick-pill'),
+      visibleCount: document.getElementById('visibleCount'),
+      totalItemsCount: document.getElementById('totalItemsCount'),
+      activeFilterBadge: document.getElementById('activeFilterBadge'),
+      favCount: document.getElementById('favCount'),
+      viewGroupedBtn: document.getElementById('viewGroupedBtn'),
+      viewGridBtn: document.getElementById('viewGridBtn'),
+      viewTableBtn: document.getElementById('viewTableBtn'),
+      btnFontToggle: document.getElementById('btnFontToggle'),
+      fontScaleText: document.getElementById('fontScaleText'),
+      btnSoundToggle: document.getElementById('btnSoundToggle'),
+      soundIcon: document.getElementById('soundIcon'),
+      soundText: document.getElementById('soundText'),
+      btnOpenDialpad: document.getElementById('btnOpenDialpad'),
+      dialpadModal: document.getElementById('dialpadModal'),
+      closeDialpadBtn: document.getElementById('closeDialpadBtn'),
+      dialpadScreen: document.getElementById('dialpadScreen'),
+      dialpadValue: document.getElementById('dialpadValue'),
+      dialMatchPreview: document.getElementById('dialMatchPreview'),
+      dialMatchText: document.getElementById('dialMatchText'),
+      dialMatchExt: document.getElementById('dialMatchExt'),
+      dialpadBackspace: document.getElementById('dialpadBackspace'),
+      dialpadCallBtn: document.getElementById('dialpadCallBtn'),
+      btnPrint: document.getElementById('btnPrint'),
+      toastContainer: document.getElementById('toastContainer')
+    };
+
+    /**
+     * Toast Notifications Helper
+     */
+    function showToast(message, icon = '✅') {
+      const toast = document.createElement('div');
+      toast.className = 'toast-msg';
+      toast.innerHTML = `<span>${icon}</span> <span>${message}</span>`;
+      dom.toastContainer.appendChild(toast);
+      
+      // Animate in
+      requestAnimationFrame(() => toast.classList.add('show'));
+
+      setTimeout(() => {
+        toast.classList.remove('show');
+        setTimeout(() => toast.remove(), 350);
+      }, 2500);
+    }
+
+    /**
+     * Copy to Clipboard Helper
+     */
+    function copyToClipboard(text, label = '分機號碼') {
+      sound.playCopyChime();
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(() => {
+          showToast(`已成功複製 ${label}：${text}`);
+        }).catch(() => fallbackCopy(text, label));
+      } else {
+        fallbackCopy(text, label);
+      }
+    }
+
+    function fallbackCopy(text, label) {
+      const textarea = document.createElement('textarea');
+      textarea.value = text;
+      document.body.appendChild(textarea);
+      textarea.select();
+      try {
+        document.execCommand('copy');
+        showToast(`已複製 ${label}：${text}`);
+      } catch(e) {
+        showToast(`請手動複製：${text}`, 'ℹ️');
+      }
+      document.body.removeChild(textarea);
+    }
+
+    /**
+     * Direct Call Helper (Supports mobile tel: protocol)
+     */
+    function dialExtension(extNumber, directTel = null) {
+      sound.playClick();
+      // Clean extension for dial (if comma-separated, pick first)
+      const cleanExt = extNumber.split(',')[0].trim();
+      let callUrl = `tel:034789618,${cleanExt}`;
+      
+      if (directTel) {
+        const cleanDirect = directTel.replace(/[^0-9]/g, '');
+        showToast(`撥打專線：03-${cleanDirect} (或轉 ${cleanExt})`, '📞');
+      } else {
+        showToast(`手機直撥總機轉分機：03-4789618,${cleanExt}`, '📞');
+      }
+
+      window.location.href = callUrl;
+    }
+
+    /**
+     * Toggle Favorite
+     */
+    function toggleFavorite(id) {
+      sound.playPop();
+      if (state.favorites.has(id)) {
+        state.favorites.delete(id);
+        showToast('已自常用清單移除', '⭐');
+      } else {
+        state.favorites.add(id);
+        showToast('已加入個人常用分機！', '🌟');
+      }
+      try {
+        localStorage.setItem('tyhs_favs', JSON.stringify([...state.favorites]));
+      } catch(e) {}
+      updateCounters();
+      renderContent();
+    }
+
+    /**
+     * Highlight Matched Search Terms in text
+     */
+    function highlightMatch(text, query) {
+      if (!query || !text) return text;
+      const cleanQ = query.trim().replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      if (!cleanQ) return text;
+      const regex = new RegExp(`(${cleanQ})`, 'gi');
+      return text.replace(regex, '<mark class="search-highlight">$1</mark>');
+    }
+
+    /**
+     * Filter Dataset according to state (search query, quick filters, category)
+     */
+    function getFilteredData() {
+      const query = state.searchQuery.trim().toLowerCase();
+      
+      return SCHOOL_DATA.filter(item => {
+        // 1. Quick Filters Check
+        if (state.activeQuickFilter === 'favs' && !state.favorites.has(item.id)) {
+          return false;
+        }
+        if (state.activeQuickFilter === 'emergency' && !item.isEmergency) {
+          return false;
+        }
+        if (state.activeQuickFilter === 'chiefs' && !item.isChief) {
+          return false;
+        }
+        if (state.activeQuickFilter === 'directlines' && !item.directTel) {
+          return false;
+        }
+        if (state.activeQuickFilter === 'homeroom' && item.dept !== '導師辦公室') {
+          return false;
+        }
+        if (state.activeQuickFilter === 'labs' && (item.dept !== '實驗室' && item.dept !== '專科教室' && item.dept !== '日新樓專科教室')) {
+          return false;
+        }
+
+        // 2. Category Tab Filter
+        if (state.activeCategory !== 'all' && item.group !== state.activeCategory && item.dept !== state.activeCategory) {
+          return false;
+        }
+
+        // 3. Search Query Matching (Name, Title, Department, Ext, DirectTel, Fax, Building, Tags)
+        if (query) {
+          const inTitle = item.title && item.title.toLowerCase().includes(query);
+          const inName = item.name && item.name.toLowerCase().includes(query);
+          const inDept = item.dept && item.dept.toLowerCase().includes(query);
+          const inExt = item.ext && item.ext.toLowerCase().includes(query);
+          const inDirect = item.directTel && item.directTel.toLowerCase().includes(query);
+          const inFax = item.fax && item.fax.toLowerCase().includes(query);
+          const inBuilding = item.building && item.building.toLowerCase().includes(query);
+          const inTags = item.tags && item.tags.some(t => t.toLowerCase().includes(query));
+
+          if (!inTitle && !inName && !inDept && !inExt && !inDirect && !inFax && !inBuilding && !inTags) {
+            return false;
+          }
+        }
+
+        return true;
+      });
+    }
+
+    /**
+     * Update Badge Counters
+     */
+    function updateCounters() {
+      dom.favCount.textContent = state.favorites.size;
+      dom.totalItemsCount.textContent = SCHOOL_DATA.length;
+
+      // Category count updater
+      const counts = {
+        'all': SCHOOL_DATA.length,
+        '校長室與行政': 0,
+        '教務處': 0,
+        '學務處': 0,
+        '總務處': 0,
+        '實習處': 0,
+        '輔導室': 0,
+        '圖書館': 0,
+        '導師辦公室': 0,
+        '專任教師辦公室': 0,
+        '實驗室': 0,
+        '專科教室': 0,
+        '日新樓專科教室': 0,
+        '御風樓': 0,
+        '生科大樓': 0
+      };
+
+      SCHOOL_DATA.forEach(item => {
+        if (counts[item.group] !== undefined) counts[item.group]++;
+        if (counts[item.dept] !== undefined) counts[item.dept]++;
+      });
+
+      const countMap = {
+        'countAll': counts['all'],
+        'countAdmin': counts['校長室與行政'],
+        'countAcademic': counts['教務處'],
+        'countStudent': counts['學務處'],
+        'countGeneral': counts['總務處'],
+        'countPractice': counts['實習處'],
+        'countCounsel': counts['輔導室'],
+        'countLibrary': counts['圖書館'],
+        'countHomeroom': counts['導師辦公室'],
+        'countTeachers': counts['專任教師辦公室'],
+        'countLabs': counts['實驗室'],
+        'countSpecial': counts['專科教室'],
+        'countRixin': counts['日新樓專科教室'],
+        'countYufeng': counts['御風樓'],
+        'countLife': counts['生科大樓']
+      };
+
+      for (let [id, val] of Object.entries(countMap)) {
+        const el = document.getElementById(id);
+        if (el) el.textContent = val || 0;
+      }
+    }
+
+    /**
+     * Render Single Card HTML
+     */
+    function createCardHTML(item) {
+      const theme = DEPT_THEMES[item.color] || DEPT_THEMES.admin;
+      const isFav = state.favorites.has(item.id);
+      const query = state.searchQuery;
+
+      const titleH = highlightMatch(item.title, query);
+      const nameH = item.name ? highlightMatch(item.name, query) : '';
+      const deptH = highlightMatch(item.dept, query);
+      const extH = highlightMatch(item.ext, query);
+      const bldH = item.building ? highlightMatch(item.building, query) : '';
+
+      return `
+        <article class="ext-card" style="--dept-color:${theme.color}; --dept-bg:${theme.bg}; --dept-border:${theme.border};">
+          <div>
+            <div class="ext-card-header">
+              <span class="dept-badge">
+                <span>${theme.icon}</span>
+                <span>${deptH}</span>
+              </span>
+              
+              <div style="display:flex; align-items:center; gap:6px;">
+                ${bldH ? `<span class="building-tag">📍 ${bldH}</span>` : ''}
+                <button class="fav-star-btn ${isFav ? 'is-fav' : ''}" onclick="toggleFavorite('${item.id}')" title="${isFav ? '自常用移除' : '加入常用'}">
+                  ${isFav ? '★' : '☆'}
+                </button>
+              </div>
+            </div>
+
+            <div class="ext-card-body">
+              <div class="title-name-row">
+                <h4 class="job-title">${titleH}</h4>
+                ${nameH ? `<span class="person-name">👤 ${nameH}</span>` : ''}
+              </div>
+
+              ${(item.directTel || item.fax) ? `
+                <div class="direct-lines-info">
+                  ${item.directTel ? `
+                    <span class="line-chip direct-tel">
+                      <span>☎️ 專線:</span>
+                      <a href="tel:03${item.directTel}" style="color:inherit; text-decoration:none; font-weight:700;">03-${highlightMatch(item.directTel, query)}</a>
+                    </span>
+                  ` : ''}
+                  ${item.fax ? `
+                    <span class="line-chip fax-num">
+                      <span>📠 傳真:</span>
+                      <span>03-${highlightMatch(item.fax, query)}</span>
+                    </span>
+                  ` : ''}
+                </div>
+              ` : ''}
+            </div>
+          </div>
+
+          <div>
+            <div class="ext-number-box">
+              <div class="ext-numbers-wrap">
+                <span style="font-size:0.75rem; color:#64748b; font-weight:700;">分機</span>
+                <span class="ext-num-badge">${extH}</span>
+              </div>
+              <button class="btn-copy action-btn" onclick="copyToClipboard('${item.ext}', '${item.dept} ${item.title}')" title="複製分機號碼">
+                <span>📋</span> <span>複製</span>
+              </button>
+            </div>
+
+            <div class="ext-card-actions" style="margin-top:8px;">
+              <button class="btn-call action-btn" onclick="dialExtension('${item.ext}', '${item.directTel || ''}')" title="透過手機直撥分機">
+                <span>📞</span> <span>點擊撥打</span>
+              </button>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    /**
+     * Render Content based on View Mode
+     */
+    function renderContent() {
+      const items = getFilteredData();
+      dom.visibleCount.textContent = items.length;
+
+      // Active filter pill indicator badge
+      if (state.activeQuickFilter !== 'all') {
+        dom.activeFilterBadge.style.display = 'inline-block';
+        const labelMap = {
+          'favs': '⭐ 我的常用分機',
+          'emergency': '🚨 緊急與安全分機',
+          'chiefs': '👔 處室首長/主任',
+          'directlines': '📞 專線電話項目',
+          'homeroom': '👨‍🏫 導師辦公室',
+          'labs': '🧪 實驗室/專科教室'
+        };
+        dom.activeFilterBadge.textContent = labelMap[state.activeQuickFilter] || '';
+      } else {
+        dom.activeFilterBadge.style.display = 'none';
+      }
+
+      // Empty State
+      if (items.length === 0) {
+        dom.contentContainer.innerHTML = `
+          <div class="empty-state-card">
+            <div class="empty-icon">🔎</div>
+            <h3 class="empty-title">查無符合條件的分機資訊</h3>
+            <p class="empty-desc">找不到與「${state.searchQuery || '目前篩選條件'}」相符的處室、姓名或分機號碼。</p>
+            <button class="action-btn btn-call" style="display:inline-flex; max-width:200px; margin:0 auto;" onclick="resetAllFilters()">
+              <span>🔄</span> <span>重設所有搜尋條件</span>
+            </button>
+          </div>
+        `;
+        return;
+      }
+
+      // 1. Grouped View (Default View by Department)
+      if (state.viewMode === 'grouped') {
+        renderGroupedView(items);
+      } 
+      // 2. Flat Grid View
+      else if (state.viewMode === 'grid') {
+        renderGridView(items);
+      } 
+      // 3. Compact Table View
+      else if (state.viewMode === 'table') {
+        renderTableView(items);
+      }
+    }
+
+    /**
+     * Render Grouped View by Department Section
+     */
+    function renderGroupedView(items) {
+      // Group items by item.dept or item.group
+      const groups = {};
+      items.forEach(item => {
+        const grp = item.dept;
+        if (!groups[grp]) groups[grp] = [];
+        groups[grp].push(item);
+      });
+
+      let html = '<div class="dept-groups-container">';
+
+      for (let [deptName, deptItems] of Object.entries(groups)) {
+        const firstItem = deptItems[0];
+        const theme = DEPT_THEMES[firstItem.color] || DEPT_THEMES.admin;
+        
+        // Find direct lines and faxes for this department
+        const directTel = deptItems.find(i => i.directTel)?.directTel;
+        const fax = deptItems.find(i => i.fax)?.fax;
+
+        html += `
+          <section class="dept-section" style="--dept-color:${theme.color};">
+            <div class="dept-section-header" style="--dept-header-bg:${theme.bg}">
+              <div class="dept-title-group">
+                <div class="dept-title-icon">${theme.icon}</div>
+                <div>
+                  <h3 class="dept-title-text">${deptName}</h3>
+                  <small style="color:#64748b; font-weight:600;">共 ${deptItems.length} 項分機服務</small>
+                </div>
+              </div>
+
+              <div class="dept-header-telecom">
+                ${directTel ? `
+                  <div class="telecom-pill">
+                    <span>☎️ 處室專線:</span>
+                    <a href="tel:03${directTel}">03-${directTel}</a>
+                  </div>
+                ` : ''}
+                ${fax ? `
+                  <div class="telecom-pill">
+                    <span>📠 傳真:</span>
+                    <span>03-${fax}</span>
+                  </div>
+                ` : ''}
+              </div>
+            </div>
+
+            <div class="dept-section-grid">
+              ${deptItems.map(item => createCardHTML(item)).join('')}
+            </div>
+          </section>
+        `;
+      }
+
+      html += '</div>';
+      dom.contentContainer.innerHTML = html;
+    }
+
+    /**
+     * Flat Grid View
+     */
+    function renderGridView(items) {
+      let html = '<div class="extensions-grid">';
+      html += items.map(item => createCardHTML(item)).join('');
+      html += '</div>';
+      dom.contentContainer.innerHTML = html;
+    }
+
+    /**
+     * Compact Table View
+     */
+    function renderTableView(items) {
+      const query = state.searchQuery;
+
+      let html = `
+        <div class="table-view-container">
+          <table class="ext-data-table">
+            <thead>
+              <tr>
+                <th style="width:120px;">處室單位</th>
+                <th>職稱 / 業務</th>
+                <th>教職員姓名</th>
+                <th style="width:130px;">分機號碼</th>
+                <th>專線電話 / 傳真</th>
+                <th>所在位置</th>
+                <th style="text-align:center; width:140px;">快速操作</th>
+              </tr>
+            </thead>
+            <tbody>
+      `;
+
+      items.forEach(item => {
+        const theme = DEPT_THEMES[item.color] || DEPT_THEMES.admin;
+        const isFav = state.favorites.has(item.id);
+
+        html += `
+          <tr>
+            <td>
+              <span class="dept-badge" style="--dept-color:${theme.color}; --dept-bg:${theme.bg}; --dept-border:${theme.border};">
+                ${theme.icon} ${highlightMatch(item.dept, query)}
+              </span>
+            </td>
+            <td style="font-weight:700;">${highlightMatch(item.title, query)}</td>
+            <td>
+              ${item.name ? `<span class="person-name">👤 ${highlightMatch(item.name, query)}</span>` : '<span style="color:#94a3b8">-</span>'}
+            </td>
+            <td>
+              <span class="table-ext-num">${highlightMatch(item.ext, query)}</span>
+            </td>
+            <td>
+              ${item.directTel ? `<div>☎️ <a href="tel:03${item.directTel}" style="color:#0284c7; font-weight:600;">03-${highlightMatch(item.directTel, query)}</a></div>` : ''}
+              ${item.fax ? `<div style="color:#64748b; font-size:0.8rem;">📠 03-${highlightMatch(item.fax, query)}</div>` : ''}
+              ${(!item.directTel && !item.fax) ? '<span style="color:#94a3b8">-</span>' : ''}
+            </td>
+            <td>
+              ${item.building ? `<span class="building-tag">📍 ${highlightMatch(item.building, query)}</span>` : '<span style="color:#94a3b8">-</span>'}
+            </td>
+            <td style="text-align:center;">
+              <div style="display:inline-flex; gap:6px;">
+                <button class="action-btn btn-copy" style="padding:0.35rem 0.6rem;" onclick="copyToClipboard('${item.ext}', '${item.dept} ${item.title}')" title="複製分機">
+                  📋
+                </button>
+                <button class="action-btn btn-call" style="padding:0.35rem 0.6rem;" onclick="dialExtension('${item.ext}', '${item.directTel || ''}')" title="撥打電話">
+                  📞
+                </button>
+                <button class="fav-star-btn ${isFav ? 'is-fav' : ''}" style="font-size:1.1rem;" onclick="toggleFavorite('${item.id}')" title="常用">
+                  ${isFav ? '★' : '☆'}
+                </button>
+              </div>
+            </td>
+          </tr>
+        `;
+      });
+
+      html += `
+            </tbody>
+          </table>
+        </div>
+      `;
+
+      dom.contentContainer.innerHTML = html;
+    }
+
+    /**
+     * Reset Filters Helper
+     */
+    function resetAllFilters() {
+      sound.playClick();
+      state.searchQuery = '';
+      state.activeCategory = 'all';
+      state.activeQuickFilter = 'all';
+      dom.searchInput.value = '';
+      dom.clearSearchBtn.style.display = 'none';
+
+      dom.quickPills.forEach(p => p.classList.remove('active'));
+      document.querySelector('.quick-pill[data-filter="all"]')?.classList.add('active');
+
+      document.querySelectorAll('.cat-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector('.cat-tab-btn[data-cat="all"]')?.classList.add('active');
+
+      renderContent();
+    }
+
+    /**
+     * Filter by Keyword (from campus building pills)
+     */
+    function filterByKeyword(kw) {
+      sound.playPop();
+      state.searchQuery = kw;
+      dom.searchInput.value = kw;
+      dom.clearSearchBtn.style.display = 'flex';
+      state.activeCategory = 'all';
+      state.activeQuickFilter = 'all';
+
+      dom.quickPills.forEach(p => p.classList.remove('active'));
+      document.querySelector('.quick-pill[data-filter="all"]')?.classList.add('active');
+
+      document.querySelectorAll('.cat-tab-btn').forEach(btn => btn.classList.remove('active'));
+      document.querySelector('.cat-tab-btn[data-cat="all"]')?.classList.add('active');
+
+      renderContent();
+      
+      // Scroll to content view
+      dom.contentContainer.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    /**
+     * Font Scale Switcher
+     */
+    function toggleFontScale() {
+      sound.playClick();
+      const scales = ['normal', 'large', 'xlarge'];
+      const labels = { 'normal': '字體: 標準', 'large': '字體: 放大', 'xlarge': '字體: 特大' };
+      
+      const currentIdx = scales.indexOf(state.fontScale);
+      const nextIdx = (currentIdx + 1) % scales.length;
+      state.fontScale = scales[nextIdx];
+
+      document.body.className = `font-${state.fontScale}`;
+      dom.fontScaleText.textContent = labels[state.fontScale];
+
+      try {
+        localStorage.setItem('tyhs_font', state.fontScale);
+      } catch(e) {}
+
+      showToast(`已切換為：${labels[state.fontScale]}`, '🔤');
+    }
+
+    /**
+     * Sound Toggle
+     */
+    function toggleSound() {
+      sound.enabled = !sound.enabled;
+      if (sound.enabled) {
+        sound.playClick();
+        dom.soundIcon.textContent = '🔊';
+        dom.soundText.textContent = '音效開啟';
+        showToast('互動音效已開啟', '🔊');
+      } else {
+        dom.soundIcon.textContent = '🔇';
+        dom.soundText.textContent = '音效靜音';
+        showToast('互動音效已靜音', '🔇');
+      }
+
+      try {
+        localStorage.setItem('tyhs_sound', sound.enabled ? 'true' : 'false');
+      } catch(e) {}
+    }
+
+    /**
+     * Dialpad Modal Logic
+     */
+    function toggleDialpad(show = true) {
+      sound.playClick();
+      if (show) {
+        dom.dialpadModal.classList.add('show');
+        updateDialpadScreen();
+      } else {
+        dom.dialpadModal.classList.remove('show');
+      }
+    }
+
+    function appendDialDigit(d) {
+      sound.playDtmf(d);
+      if (state.dialpadInput.length < 10) {
+        state.dialpadInput += d;
+        updateDialpadScreen();
+      }
+    }
+
+    function backspaceDial() {
+      sound.playClick();
+      state.dialpadInput = state.dialpadInput.slice(0, -1);
+      updateDialpadScreen();
+    }
+
+    function updateDialpadScreen() {
+      dom.dialpadValue.textContent = state.dialpadInput || '';
+      
+      // Look for matches
+      if (!state.dialpadInput) {
+        dom.dialMatchText.textContent = '輸入 4 碼分機以快速過濾聯絡人';
+        dom.dialMatchExt.textContent = '';
+      } else {
+        const found = SCHOOL_DATA.filter(item => item.ext.includes(state.dialpadInput));
+        if (found.length === 1) {
+          const match = found[0];
+          dom.dialMatchText.textContent = `符合：${match.dept} ${match.title} ${match.name || ''}`;
+          dom.dialMatchExt.textContent = `(分機 ${match.ext})`;
+        } else if (found.length > 1) {
+          dom.dialMatchText.textContent = `找到 ${found.length} 筆相符分機 (${found.map(f => f.title).slice(0, 2).join(', ')}...)`;
+          dom.dialMatchExt.textContent = '';
+        } else {
+          dom.dialMatchText.textContent = '尚無相符分機號碼';
+          dom.dialMatchExt.textContent = '';
+        }
+      }
+    }
+
+    function dialpadExecuteCall() {
+      sound.playClick();
+      if (!state.dialpadInput) {
+        showToast('請先輸入分機號碼', '⚠️');
+        return;
+      }
+      dialExtension(state.dialpadInput);
+      toggleDialpad(false);
+    }
+
+    /**
+     * Event Listeners Registration
+     */
+    function setupEventListeners() {
+      // Search input live handler
+      dom.searchInput.addEventListener('input', (e) => {
+        state.searchQuery = e.target.value;
+        dom.clearSearchBtn.style.display = state.searchQuery ? 'flex' : 'none';
+        renderContent();
+      });
+
+      // Clear search
+      dom.clearSearchBtn.addEventListener('click', () => {
+        sound.playClick();
+        state.searchQuery = '';
+        dom.searchInput.value = '';
+        dom.clearSearchBtn.style.display = 'none';
+        dom.searchInput.focus();
+        renderContent();
+      });
+
+      // Quick filter pills
+      dom.quickPills.forEach(pill => {
+        pill.addEventListener('click', () => {
+          sound.playPop();
+          dom.quickPills.forEach(p => p.classList.remove('active'));
+          pill.classList.add('active');
+
+          state.activeQuickFilter = pill.dataset.filter;
+          renderContent();
+        });
+      });
+
+      // Category tab buttons
+      dom.categoryTabs.addEventListener('click', (e) => {
+        const btn = e.target.closest('.cat-tab-btn');
+        if (!btn) return;
+        sound.playPop();
+
+        document.querySelectorAll('.cat-tab-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+
+        state.activeCategory = btn.dataset.cat;
+        renderContent();
+      });
+
+      // View mode toggles
+      dom.viewGroupedBtn.addEventListener('click', () => {
+        sound.playClick();
+        state.viewMode = 'grouped';
+        dom.viewGroupedBtn.classList.add('active');
+        dom.viewGridBtn.classList.remove('active');
+        dom.viewTableBtn.classList.remove('active');
+        renderContent();
+      });
+
+      dom.viewGridBtn.addEventListener('click', () => {
+        sound.playClick();
+        state.viewMode = 'grid';
+        dom.viewGroupedBtn.classList.remove('active');
+        dom.viewGridBtn.classList.add('active');
+        dom.viewTableBtn.classList.remove('active');
+        renderContent();
+      });
+
+      dom.viewTableBtn.addEventListener('click', () => {
+        sound.playClick();
+        state.viewMode = 'table';
+        dom.viewGroupedBtn.classList.remove('active');
+        dom.viewGridBtn.classList.remove('active');
+        dom.viewTableBtn.classList.add('active');
+        renderContent();
+      });
+
+      // Font Scale toggle
+      dom.btnFontToggle.addEventListener('click', toggleFontScale);
+
+      // Sound toggle
+      dom.btnSoundToggle.addEventListener('click', toggleSound);
+
+      // Print
+      dom.btnPrint.addEventListener('click', () => {
+        sound.playClick();
+        window.print();
+      });
+
+      // Dialpad open / close
+      dom.btnOpenDialpad.addEventListener('click', () => toggleDialpad(true));
+      dom.closeDialpadBtn.addEventListener('click', () => toggleDialpad(false));
+      dom.dialpadModal.addEventListener('click', (e) => {
+        if (e.target === dom.dialpadModal) toggleDialpad(false);
+      });
+
+      // Dialpad digits
+      document.querySelectorAll('.digit-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          appendDialDigit(btn.dataset.key);
+        });
+      });
+
+      dom.dialpadBackspace.addEventListener('click', backspaceDial);
+      dom.dialpadCallBtn.addEventListener('click', dialpadExecuteCall);
+
+      // Keyboard shortcut: '/' to search, 'Escape' to close modal
+      document.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== dom.searchInput) {
+          e.preventDefault();
+          dom.searchInput.focus();
+        } else if (e.key === 'Escape') {
+          if (dom.dialpadModal.classList.contains('show')) {
+            toggleDialpad(false);
+          }
+        }
+      });
+    }
+
+    /**
+     * Initializer
+     */
+    function init() {
+      // Sync initial sound state text
+      if (!sound.enabled) {
+        dom.soundIcon.textContent = '🔇';
+        dom.soundText.textContent = '音效靜音';
+      }
+
+      // Sync initial font state text
+      const fontLabels = { 'normal': '字體: 標準', 'large': '字體: 放大', 'xlarge': '字體: 特大' };
+      dom.fontScaleText.textContent = fontLabels[state.fontScale] || '字體: 標準';
+
+      updateCounters();
+      renderContent();
+      setupEventListeners();
+    }
+
+    // Run on DOM Ready
+    document.addEventListener('DOMContentLoaded', init);
+  </script>
+</body>
+</html>
